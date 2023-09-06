@@ -1,6 +1,6 @@
 import logo from "./../assets/ICT-2020-LOGO-ISFEC-FRANCOIS-ASSISE.png"
 
-export const Login = () => {
+export function Login()  {
     return (
         <>
             <div className="flex h-screen flex-1">
