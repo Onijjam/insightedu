@@ -12,21 +12,33 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 
-const navigation = [
-    { name: 'Tableau de bord', href: '#', icon: HomeIcon, current: true },
-    { name: 'Équipe', href: '#', icon: UsersIcon, current: false },
-    { name: 'Projets', href: '#', icon: FolderIcon, current: false },
-    { name: 'Calendrier', href: '#', icon: CalendarIcon, current: false },
-    { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-    { name: 'Rapports', href: '#', icon: ChartPieIcon, current: false },
-]
-
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function Sidebar() {
+// eslint-disable-next-line react/prop-types
+export function Sidebar({ children }) {
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const [navigation, setNavigation] = useState([
+        { name: 'Tableau de bord', href: '#', icon: HomeIcon, current: true },
+        { name: 'Équipe', href: '#', icon: UsersIcon, current: false },
+        { name: 'Projets', href: '#', icon: FolderIcon, current: false },
+        { name: 'Calendrier', href: '#', icon: CalendarIcon, current: false },
+        { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
+        { name: 'Rapports', href: '#', icon: ChartPieIcon, current: false },
+    ]);
+
+    const handleNavigationClick = (clickedItemName) => {
+        setNavigation((prevNavigation) =>
+            prevNavigation.map((item) => {
+                if (item.name === clickedItemName) {
+                    return { ...item, current: true };
+                } else {
+                    return { ...item, current: false };
+                }
+            })
+        );
+    };
 
     return (
         <>
@@ -88,6 +100,7 @@ export function Sidebar() {
                                                             <li key={item.name}>
                                                                 <a
                                                                     href={item.href}
+                                                                    onClick={() => handleNavigationClick(item.name)}
                                                                     className={classNames(
                                                                         item.current
                                                                             ? 'bg-gray-50 text-cyan-500'
@@ -135,6 +148,7 @@ export function Sidebar() {
                                             <li key={item.name}>
                                                 <a
                                                     href={item.href}
+                                                    onClick={() => handleNavigationClick(item.name)}
                                                     className={classNames(
                                                         item.current
                                                             ? 'bg-gray-50 text-cyan-500'
@@ -190,12 +204,10 @@ export function Sidebar() {
                     </a>
                 </div>
 
-                <main className="py-10 lg:pl-72 h-screen">
+                <main className="py-10 h-[92vh] lg:pl-72 lg:h-screen">
                     <div className="px-4 sm:px-6 lg:px-8 h-full">
                         {/* Your content */}
-                        <div className={"bg-gray-400 w-full h-full rounded-md"}>
-
-                        </div>
+                        { children }
                     </div>
                 </main>
             </div>
