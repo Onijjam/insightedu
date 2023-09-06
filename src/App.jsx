@@ -5,7 +5,11 @@ function App() {
 
   return (
     <>
-      <Sidebar />
+      <Sidebar>
+          <div className={"bg-gray-300 w-full h-full rounded-md"}>
+
+          </div>
+      </Sidebar>
     </>
   )
 }
