@@ -1,15 +1,17 @@
 import './App.css'
 import {Sidebar} from "./components/Sidebar.jsx";
+import {Login} from "./pages/Login.jsx";
 
 function App() {
 
   return (
     <>
-      <Sidebar>
-          <div className={"bg-gray-300 w-full h-full rounded-md"}>
+        <Login />
+        {/*<Sidebar>
+            <div className={"bg-gray-300 w-full h-full rounded-md"}>
 
-          </div>
-      </Sidebar>
+            </div>
+        </Sidebar>*/}
     </>
   )
 }
