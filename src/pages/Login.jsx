@@ -1,6 +1,25 @@
 import logo from "./../assets/ICT-2020-LOGO-ISFEC-FRANCOIS-ASSISE.png"
+import { useState } from "react";
+import {Alert} from "../components/Alert.jsx";
 
-export function Login()  {
+// eslint-disable-next-line react/prop-types
+export function Login({ onSuccessfulLogin })  {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [showAlert, setShowAlert] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const isAuthenticated = email === "test@test.com" && password === "password"; // À remplacer par un appel API
+
+        if (isAuthenticated) {
+            sessionStorage.setItem("loggedIn", "true");
+            onSuccessfulLogin();
+        } else {
+            setShowAlert(true);
+        }
+    };
+
     return (
         <>
             <div className="flex h-screen flex-1">
@@ -19,7 +38,7 @@ export function Login()  {
 
                         <div className="mt-10">
                             <div>
-                                <form action="#" method="POST" className="space-y-6">
+                                <form onSubmit={handleSubmit} className="space-y-6">
                                     <div>
                                         <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                                             Adresse email
@@ -31,6 +50,8 @@ export function Login()  {
                                                 type="email"
                                                 autoComplete="email"
                                                 required
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
                                                 className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6"
                                             />
                                         </div>
@@ -47,6 +68,8 @@ export function Login()  {
                                                 type="password"
                                                 autoComplete="current-password"
                                                 required
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
                                                 className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6"
                                             />
                                         </div>
@@ -80,6 +103,7 @@ export function Login()  {
                                             Se connecter
                                         </button>
                                     </div>
+                                    {showAlert && <Alert />}
                                 </form>
                             </div>
                         </div>
