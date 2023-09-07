@@ -1,15 +1,17 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import logo from "./../assets/ICT-2020-LOGO-ISFEC-FRANCOIS-ASSISE.png"
+import {Link} from "react-router-dom";
+
 import {
     Bars3Icon,
-    CalendarIcon,
     ChartPieIcon,
     DocumentDuplicateIcon,
     FolderIcon,
     HomeIcon,
     UsersIcon,
     XMarkIcon,
+    AcademicCapIcon,
 } from '@heroicons/react/24/outline'
 
 function classNames(...classes) {
@@ -20,12 +22,12 @@ function classNames(...classes) {
 export function Sidebar({ children }) {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [navigation, setNavigation] = useState([
-        { name: 'Tableau de bord', href: '#', icon: HomeIcon, current: true },
-        { name: 'Équipe', href: '#', icon: UsersIcon, current: false },
-        { name: 'Projets', href: '#', icon: FolderIcon, current: false },
-        { name: 'Calendrier', href: '#', icon: CalendarIcon, current: false },
-        { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-        { name: 'Rapports', href: '#', icon: ChartPieIcon, current: false },
+        { name: 'Tableau de bord', to: '/', icon: HomeIcon, current: true },
+        { name: 'Équipe', to: '/', icon: UsersIcon, current: false },
+        { name: 'Projets', to: '/', icon: FolderIcon, current: false },
+        { name: 'Formation', to: '/', icon: AcademicCapIcon, current: false },
+        { name: 'Documents', to: '/', icon: DocumentDuplicateIcon, current: false },
+        { name: 'Rapports', to: '/', icon: ChartPieIcon, current: false },
     ]);
 
     const handleNavigationClick = (clickedItemName) => {
@@ -98,8 +100,8 @@ export function Sidebar({ children }) {
                                                     <ul role="list" className="-mx-2 space-y-1">
                                                         {navigation.map((item) => (
                                                             <li key={item.name}>
-                                                                <a
-                                                                    href={item.href}
+                                                                <Link
+                                                                    to={item.to}
                                                                     onClick={() => handleNavigationClick(item.name)}
                                                                     className={classNames(
                                                                         item.current
@@ -116,7 +118,7 @@ export function Sidebar({ children }) {
                                                                         aria-hidden="true"
                                                                     />
                                                                     {item.name}
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -146,8 +148,8 @@ export function Sidebar({ children }) {
                                     <ul role="list" className="-mx-2 space-y-1">
                                         {navigation.map((item) => (
                                             <li key={item.name}>
-                                                <a
-                                                    href={item.href}
+                                                <Link
+                                                    to={item.to}
                                                     onClick={() => handleNavigationClick(item.name)}
                                                     className={classNames(
                                                         item.current
@@ -164,7 +166,7 @@ export function Sidebar({ children }) {
                                                         aria-hidden="true"
                                                     />
                                                     {item.name}
-                                                </a>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
