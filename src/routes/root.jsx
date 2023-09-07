@@ -1,4 +1,4 @@
-import {createBrowserRouter, Outlet} from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 import {Dashboard} from "../pages/Dashboard.jsx";
 import {ContactSupport} from "../pages/ContactSupport.jsx";
 import App from "../App.jsx";
