@@ -52,7 +52,7 @@ export function ContactSupport() {
                             </div>
                         </div>
 
-                        <div className="sm:col-span-4">
+                        <div className="sm:col-span-6">
                             <label htmlFor="comment" className="block text-sm font-medium leading-6 text-gray-900">
                                 Rajoutez votre message
                             </label>
