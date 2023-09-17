@@ -5,30 +5,50 @@ import {Link} from "react-router-dom";
 
 import {
     Bars3Icon,
-    ChartPieIcon,
-    DocumentDuplicateIcon,
-    FolderIcon,
     HomeIcon,
     UsersIcon,
     XMarkIcon,
     AcademicCapIcon,
+    CheckCircleIcon,
+    ChartBarIcon,
+    BriefcaseIcon
 } from '@heroicons/react/24/outline'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
+const navigationIsfec = [
+    { name: 'Accueil', to: '/', icon: HomeIcon, current: true },
+    { name: 'Formateurs', to: '/', icon: BriefcaseIcon, current: false },
+    { name: 'Apprenants', to: '/', icon: AcademicCapIcon, current: false },
+    { name: 'Statistiques', to: '/', icon: ChartBarIcon, current: false },
+    { name: 'Contact', to: '/', icon: UsersIcon, current: false },
+];
+
+const navigationFormateur = [
+    { name: 'Accueil', to: '/', icon: HomeIcon, current: true },
+    { name: 'Compétences', to: '/', icon: CheckCircleIcon, current: false },
+    { name: 'Apprenants', to: '/', icon: AcademicCapIcon, current: false },
+    { name: 'Statistiques', to: '/', icon: ChartBarIcon, current: false },
+    { name: 'Contact', to: '/', icon: UsersIcon, current: false },
+];
+
+const navigationApprenant = [
+    { name: 'Accueil', to: '/', icon: HomeIcon, current: true },
+    { name: 'Compétences', to: '/', icon: CheckCircleIcon, current: false },
+    { name: 'Contact', to: '/', icon: UsersIcon, current: false },
+]
+
 // eslint-disable-next-line react/prop-types
-export function Sidebar({ children }) {
+export function Sidebar({ children, user }) {
     const [sidebarOpen, setSidebarOpen] = useState(false)
-    const [navigation, setNavigation] = useState([
-        { name: 'Tableau de bord', to: '/', icon: HomeIcon, current: true },
-        { name: 'Équipe', to: '/', icon: UsersIcon, current: false },
-        { name: 'Projets', to: '/', icon: FolderIcon, current: false },
-        { name: 'Formation', to: '/', icon: AcademicCapIcon, current: false },
-        { name: 'Documents', to: '/', icon: DocumentDuplicateIcon, current: false },
-        { name: 'Rapports', to: '/', icon: ChartPieIcon, current: false },
-    ]);
+    const [navigation, setNavigation] = useState(
+        user === "formateur" ? navigationFormateur :
+            user === "isfec" ? navigationIsfec :
+                navigationApprenant
+    )
+
 
     const handleNavigationClick = (clickedItemName) => {
         setNavigation((prevNavigation) =>
