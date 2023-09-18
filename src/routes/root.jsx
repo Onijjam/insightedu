@@ -3,18 +3,18 @@ import {Dashboard} from "../pages/Dashboard.jsx";
 import {ContactSupport} from "../pages/ContactSupport.jsx";
 import App from "../App.jsx";
 import {ErrorPage} from "../pages/ErrorPage.jsx";
-import {Sidebar} from "../components/Sidebar.jsx";
+import NavBar from "../components/NavBar.jsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         errorElement: (
-            <Sidebar>
+            <NavBar>
                 <div className={"bg-gray-900/10 w-full h-full rounded-md lg:p-5"}>
                     <ErrorPage />
                 </div>
-            </Sidebar>
+            </NavBar>
         ),
         children: [
             {

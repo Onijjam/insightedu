@@ -1,5 +1,4 @@
 import './App.css'
-import {Sidebar} from "./components/Sidebar.jsx";
 import NavBar from "./components/NavBar.jsx"
 import {Login} from "./pages/Login.jsx";
 import { Outlet } from "react-router-dom";
