@@ -21,8 +21,8 @@ function App() {
     return (
         <>
             {isLoggedIn ? (
-                <NavBar utilisateur={"isfec"}>
-                    <div className={"bg-gray-900/10 w-full h-full rounded-md lg:p-5"}>
+                <NavBar utilisateur={"apprenant"}>
+                    <div className={"bg-gray-900/10 w-full h-full rounded-md sm:p-5"}>
                         <Outlet />
                     </div>
                 </NavBar>

@@ -4,6 +4,8 @@ import {ContactSupport} from "../pages/ContactSupport.jsx";
 import App from "../App.jsx";
 import {ErrorPage} from "../pages/ErrorPage.jsx";
 import NavBar from "../components/NavBar.jsx";
+import {Competences} from "../pages/Competences.jsx";
+import {CompMineurs} from "../pages/CompMineurs.jsx";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
             {
                 path: "/contact-support",
                 element: <ContactSupport />
+            },
+            {
+                path: "/competences",
+                element: <Competences />
+            },
+            {
+                path: "/competences/:major",
+                element: <CompMineurs />
             },
         ]
     }
