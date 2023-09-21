@@ -3,6 +3,7 @@ import {Dashboard} from "../pages/Dashboard.jsx";
 import {ContactSupport} from "../pages/ContactSupport.jsx";
 import App from "../App.jsx";
 import {ErrorPage} from "../pages/ErrorPage.jsx";
+import FormCompetences from "../pages/FormCompetences.jsx";
 import NavBar from "../components/NavBar.jsx";
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
                 path: "/contact-support",
                 element: <ContactSupport />
             },
+            {
+                path: "/form-competences",
+                element: <FormCompetences />
+            }
         ]
     }
 ]);
