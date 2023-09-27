@@ -4,6 +4,7 @@ import {ContactSupport} from "../pages/ContactSupport.jsx";
 import App from "../App.jsx";
 import {ErrorPage} from "../pages/ErrorPage.jsx";
 import FormCompetences from "../pages/FormCompetences.jsx";
+import PasswordCreation from "../pages/PasswordCreation.jsx";
 import NavBar from "../components/NavBar.jsx";
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/form-competences",
                 element: <FormCompetences />
+            },
+            {
+                path: "/password-creation",
+                element: <PasswordCreation />
             }
         ]
     }
