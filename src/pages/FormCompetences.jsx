@@ -62,7 +62,7 @@ export default function Example() {
                                 className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue    -600"
                             />
                             <label htmlFor="push-everything" className="block text-sm font-medium leading-6 text-gray-900">
-                                Acquis
+                                complètement novice
                             </label>
                         </div>
                         <div className="flex items-center gap-x-3">
@@ -73,10 +73,10 @@ export default function Example() {
                                 className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
                             />
                             <label htmlFor="push-email" className="block text-sm font-medium leading-6 text-gray-900">
-                                En cours d'acquisition
+                                débutant
                             </label>
                         </div>
-                        <div className="flex items-center gap-x-3 pb-10">
+                        <div className="flex items-center gap-x-3">
                             <input
                                 id={competence}
                                 name={competence}
@@ -84,7 +84,29 @@ export default function Example() {
                                 className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
                             />
                             <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
-                                Non acquis
+                            compétent
+                            </label>
+                        </div>
+                        <div className="flex items-center gap-x-3">
+                            <input
+                                id={competence}
+                                name={competence}
+                                type="radio"
+                                className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
+                            />
+                            <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
+                                expert
+                            </label>
+                        </div>
+                        <div className="flex items-center gap-x-3  pb-10">
+                            <input
+                                id={competence}
+                                name={competence}
+                                type="radio"
+                                className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
+                            />
+                            <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
+                                ressources
                             </label>
                         </div>
                     </div>
