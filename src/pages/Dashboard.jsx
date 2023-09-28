@@ -1,7 +1,7 @@
 export function Dashboard() {
     return (
         <>
-            <div className={"grid lg:grid-cols-6 lg:grid-rows-6 lg:gap-4 h-full w-full"}>
+            <div className={"grid lg:grid-cols-6 lg:grid-rows-6 lg:gap-4 h-[92vh] lg:h-[80vh] w-full"}>
                 <div className={"lg:col-span-4 lg:row-span-6 bg-white lg:rounded-md"}>
 
                 </div>

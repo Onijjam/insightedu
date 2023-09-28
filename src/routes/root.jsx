@@ -6,6 +6,8 @@ import {ErrorPage} from "../pages/ErrorPage.jsx";
 import FormCompetences from "../pages/FormCompetences.jsx";
 import PasswordCreation from "../pages/PasswordCreation.jsx";
 import NavBar from "../components/NavBar.jsx";
+import {Competences} from "../pages/Competences.jsx";
+import {CompMineurs} from "../pages/CompMineurs.jsx";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +37,13 @@ const router = createBrowserRouter([
                 path: "/password-creation",
                 element: <PasswordCreation />
             }
+                path: "/competences",
+                element: <Competences />
+            },
+            {
+                path: "/competences/:major",
+                element: <CompMineurs />
+            },
         ]
     }
 ]);
