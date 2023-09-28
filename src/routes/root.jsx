@@ -36,7 +36,8 @@ const router = createBrowserRouter([
             {
                 path: "/password-creation",
                 element: <PasswordCreation />
-            }
+            },
+            {
                 path: "/competences",
                 element: <Competences />
             },
