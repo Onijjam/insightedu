@@ -1,6 +1,6 @@
 export function ContactSupport() {
     return (
-        <form className={"grid content-center h-full place-items-center bg-white rounded-md overflow-y-auto lg:shadow-xl lg:px-8"}>
+        <form className={"grid content-center h-[92vh] lg:h-[80vh] place-items-center bg-white rounded-md lg:shadow-xl lg:px-8"}>
             <div className="space-y-12">
                 <div className="border-b border-gray-900/10 pb-12">
                     <h2 className="text-2xl font-semibold leading-7 text-gray-900">Formulaire de contact</h2>
