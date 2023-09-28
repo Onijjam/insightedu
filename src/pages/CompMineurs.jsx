@@ -7,13 +7,13 @@ const educationPublique = [
     {
         name: 'Faire partager les valeurs de la République',
         href: '#',
-        note: 'A'
+        note: 'R'
     },
     {
         name: 'Inscrire son action dans le cadre des principes fondamentaux du système éducatif et dans le \n' +
             'cadre réglementaire de l\'école',
         href: '#',
-        note: 'EC'
+        note: 'C'
     },
 ]
 
@@ -21,37 +21,37 @@ const educationReussite = [
     {
         name: 'Connaître les élèves et les processus d\'apprentissage',
         href: '#',
-        note: 'A'
+        note: 'E'
     },
     {
         name: 'Prendre en compte la diversité des élèves',
         href: '#',
-        note: 'EC'
+        note: 'N'
     },
     {
         name: 'Accompagner les élèves dans leur parcours de formation\n',
         href: '#',
-        note: 'A'
+        note: 'D'
     },
     {
         name: 'Agir en éducateur responsable et selon des principes éthiques',
         href: '#',
-        note: 'NA'
+        note: 'R'
     },
     {
         name: 'Maîtriser la langue française à des fins de communication',
         href: '#',
-        note: 'EC'
+        note: 'E'
     },
     {
         name: 'Utiliser une langue vivante étrangère dans les situations exigées par son métier',
         href: '#',
-        note: 'A'
+        note: 'D'
     },
     {
         name: 'Intégrer les éléments de la culture numérique nécessaires à l\'exercice de son métier',
         href: '#',
-        note: 'EC'
+        note: 'N'
     },
 ]
 
@@ -59,27 +59,27 @@ const educationActeur = [
     {
         name: 'Coopérer au sein d\'une équipe',
         href: '#',
-        note: 'A'
+        note: 'N'
     },
     {
         name: 'Contribuer à l\'action de la communauté éducative',
         href: '#',
-        note: 'EC'
+        note: 'E'
     },
     {
         name: 'Coopérer avec les parents d\'élèves',
         href: '#',
-        note: 'A'
+        note: 'C'
     },
     {
         name: 'Coopérer avec les partenaires de l\'école',
         href: '#',
-        note: 'NA'
+        note: 'C'
     },
     {
         name: 'S\'engager dans une démarche individuelle et collective de développement professionnel',
         href: '#',
-        note: 'EC'
+        note: 'R'
     },
 ]
 
@@ -87,12 +87,12 @@ const educationSavoirs = [
     {
         name: 'Maîtriser les savoirs disciplinaires et leur didactique',
         href: '#',
-        note: 'A'
+        note: 'R'
     },
     {
         name: 'Maîtriser la langue française dans le cadre de son enseignement',
         href: '#',
-        note: 'A'
+        note: 'R'
     },
 ]
 
@@ -101,18 +101,18 @@ const educationExpert = [
         name: 'Construire, mettre en œuvre et animer des situations d\'enseignement et d\'apprentissage \n' +
             'prenant en compte la diversité des élèves',
         href: '#',
-        note: 'NA'
+        note: 'D'
     },
     {
         name: 'Organiser et assurer un mode de fonctionnement du groupe favorisant l\'apprentissage et la \n' +
             'socialisation des élèves',
         href: '#',
-        note: 'NA'
+        note: 'N'
     },
     {
         name: 'Évaluer les progrès et les acquisitions des élèves',
         href: '#',
-        note: 'A'
+        note: 'D'
     },
 ]
 
@@ -124,15 +124,23 @@ export function CompMineurs() {
         let textColor = '#16a34a';
 
         switch (note) {
-            case 'A':
+            case 'R':
                 value = 100;
                 break;
-            case 'EC':
+            case 'E':
+                value = 75;
+                break;
+            case 'C':
                 value = 50;
                 pathColor = '#eab308';
                 textColor = '#eab308';
                 break;
-            case 'NA':
+            case 'D':
+                value = 25;
+                pathColor = '#eab308';
+                textColor = '#eab308';
+                break;
+            case 'N':
                 value = 0;
                 pathColor = '#dc2626';
                 textColor = '#dc2626';

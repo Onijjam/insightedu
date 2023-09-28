@@ -1,39 +1,62 @@
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import {buildStyles, CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import {Link} from "react-router-dom";
 
-const people = [
+const SumComp = [
     {
-        name: 'Service public d\'éducation',
-        title: 'Les professeurs et les competencenels d\'éducation',
-        percentage: 75,
+        educationPublique: {
+            R: 1,
+            C: 1,
+        },
+        educationReussite: {
+            E: 2,
+            R: 1,
+            N: 2,
+            D: 2,
+        },
+        educationActeur: {
+            N: 1,
+            C: 2,
+            E: 1,
+            R: 1,
+        },
+        educationSavoirs: {
+            R: 2,
+        },
+        educationExpert: {
+            D: 2,
+            N: 1,
+        },
+    },
+]
+
+const titlesMap = {
+    educationPublique: {
+        name: "Service public d'éducation",
+        title: "Les professeurs et les professionnels d'éducation",
         to: '/competences/service-edu',
     },
-    {
+    educationReussite: {
         name: 'Service de la réussite de tous les élèves',
         title: 'Les professeurs et les competencenels d\'éducation, pédagogues et éducateurs',
-        percentage: 64,
         to: '/competences/reussite-edu',
     },
-    {
+    educationActeur: {
         name: 'Acteurs de la communauté éducative',
         title: 'Les professeurs et les competencenels d\'éducation',
-        percentage: 60,
         to: '/competences/communaute-edu',
     },
-    {
+    educationSavoirs: {
         name: 'Porteur de savoirs et d\'une culture commune',
         title: 'Les professeurs et les professionnels',
-        percentage: 100,
         to: '/competences/savoir-edu',
     },
-    {
+    educationExpert: {
         name: 'Experts des apprentissages',
         title: 'Les professeurs et praticiens',
-        percentage: 25,
         to: '/competences/expert-edu',
-    }
-]
+    },
+};
 
 export const Competences = () => {
     function handleValue(value) {
@@ -53,6 +76,50 @@ export const Competences = () => {
 
         return { pathColor, textColor };
     }
+
+    const valueMap = {
+        N: 0,
+        D: 1,
+        C: 2,
+        E: 3,
+        R: 4
+    };
+
+    const calculateCompletionPercentage = comp => {
+        let totalPoints = 0;
+        let achievedPoints = 0;
+
+        for (const subComp in comp) {
+            const subCompValues = comp[subComp];
+            const keys = Object.keys(subCompValues);
+            const test = Object.values(keys).map(value => {
+                return subCompValues[value] * valueMap[value];
+            });
+            const subPoints = Object.values(comp[subComp]).map(value => value);
+            achievedPoints += test.reduce((a, b) => a + b, 0);
+            totalPoints += subPoints.reduce((a, b) => a + b, 0) * 4;
+        }
+
+        return Math.round((achievedPoints / totalPoints) * 100);
+    };
+
+    const percentages = {};
+
+    SumComp.forEach(comp => {
+        for (const compName in comp) {
+            percentages[compName] = calculateCompletionPercentage({[compName]: comp[compName]});
+        }
+    });
+
+    const people = Object.keys(titlesMap).map(key => {
+        const percentage = percentages[key] || 0;
+        return {
+            name: titlesMap[key].name,
+            title: titlesMap[key].title,
+            percentage, // Utilisez le pourcentage calculé
+            to: titlesMap[key].to,
+        };
+    });
 
 
     return (
