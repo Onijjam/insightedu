@@ -3,6 +3,8 @@ import {Dashboard} from "../pages/Dashboard.jsx";
 import {ContactSupport} from "../pages/ContactSupport.jsx";
 import App from "../App.jsx";
 import {ErrorPage} from "../pages/ErrorPage.jsx";
+import FormCompetences from "../pages/FormCompetences.jsx";
+import PasswordCreation from "../pages/PasswordCreation.jsx";
 import NavBar from "../components/NavBar.jsx";
 import {Competences} from "../pages/Competences.jsx";
 import {CompMineurs} from "../pages/CompMineurs.jsx";
@@ -28,6 +30,13 @@ const router = createBrowserRouter([
                 element: <ContactSupport />
             },
             {
+                path: "/form-competences",
+                element: <FormCompetences />
+            },
+            {
+                path: "/password-creation",
+                element: <PasswordCreation />
+            }
                 path: "/competences",
                 element: <Competences />
             },
