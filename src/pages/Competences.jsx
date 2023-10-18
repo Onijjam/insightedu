@@ -123,7 +123,7 @@ export const Competences = () => {
 
 
     return (
-        <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <ul role="list" className="grid grid-cols-1 gap-6 p-5 sm:p-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {people.map((competence) => (
                 <li
                     key={competence.name}
