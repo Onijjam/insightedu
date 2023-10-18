@@ -76,7 +76,7 @@ export default function NavBar({ children, utilisateur }) {
                             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                                 <div className="flex h-16 justify-between">
                                     <div className="flex">
-                                        <div className="flex flex-shrink-0 items-center">
+                                        <Link to={"/"} className="flex flex-shrink-0 items-center">
                                             <img
                                                 className="block h-8 w-auto lg:hidden"
                                                 src={logo}
@@ -87,7 +87,7 @@ export default function NavBar({ children, utilisateur }) {
                                                 src={logo}
                                                 alt="Your Company"
                                             />
-                                        </div>
+                                        </Link>
                                         <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
                                             {navigation.map((item) => (
                                                 <Link

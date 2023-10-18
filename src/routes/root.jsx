@@ -8,6 +8,7 @@ import PasswordCreation from "../pages/PasswordCreation.jsx";
 import NavBar from "../components/NavBar.jsx";
 import {Competences} from "../pages/Competences.jsx";
 import {CompMineurs} from "../pages/CompMineurs.jsx";
+import {CompDetails} from "../pages/CompDetails.jsx";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Dashboard />
+                element: <Dashboard/>
             },
             {
                 path: "/contact-support",
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: "/competences/:major",
                 element: <CompMineurs />
+            },
+            {
+                path: "/competences/details/",
+                element: <CompDetails />
             },
         ]
     }
