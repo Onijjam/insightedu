@@ -9,6 +9,7 @@ import NavBar from "../components/NavBar.jsx";
 import {Competences} from "../pages/Competences.jsx";
 import {CompMineurs} from "../pages/CompMineurs.jsx";
 import {CompDetails} from "../pages/CompDetails.jsx";
+import ContactPage from "../pages/ContactPage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/contact-support",
                 element: <ContactSupport />
+            },
+            {
+                path: "/contact",
+                element: <ContactPage />
             },
             {
                 path: "/form-competences",

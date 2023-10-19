@@ -29,7 +29,7 @@ const navigationFormateur = [
 const navigationApprenant = [
     { name: 'Accueil', to: '/', current: true },
     { name: 'Compétences', to: '/competences', current: false },
-    { name: 'Contact', to: '/', current: false },
+    { name: 'Contact', to: '/contact', current: false },
 ]
 const userNavigation = [
     { name: 'Votre Profil', to: '/' },
