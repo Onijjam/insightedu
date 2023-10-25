@@ -242,7 +242,7 @@ export default function NavBar({ children, utilisateur }) {
                             <h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-900">{currentHeader}</h1>
                         </div>
                     </header>
-                    <main className={"min-h-[92vh] lg:min-h-[80vh]"}>
+                    <main className={"lg:min-h-[80vh]"}>
                         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 h-full">{ children }</div>
                     </main>
                 </div>
