@@ -1,8 +1,9 @@
-import {Fragment, useState} from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from "./../assets/ICT-2020-LOGO-ISFEC-FRANCOIS-ASSISE.png"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import BreadCrumb from './BreadCrumb';
 
 const user = {
     name: 'Nom Utilisateur',
@@ -238,12 +239,12 @@ export default function NavBar({ children, utilisateur }) {
 
                 <div className="py-10">
                     <header>
-                        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                            <h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-900">{currentHeader}</h1>
+                        <div className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
+                            <BreadCrumb />
                         </div>
                     </header>
                     <main className={"min-h-[92vh] lg:min-h-[80vh]"}>
-                        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 h-full">{ children }</div>
+                        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 h-full">{children}</div>
                     </main>
                 </div>
             </div>
