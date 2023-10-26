@@ -50,12 +50,6 @@ export default function NavBar({ children, utilisateur }) {
                 navigationApprenant
     );
 
-    const [currentHeader, setCurrentHeader] = useState("Accueil");
-
-    const updateHeaderTitle = (itemName) => {
-        setCurrentHeader(itemName);
-    };
-
     const handleNavigationClick = (clickedItemName) => {
         setNavigation((prevNavigation) =>
             prevNavigation.map((item) => {
@@ -96,7 +90,6 @@ export default function NavBar({ children, utilisateur }) {
                                                     to={item.to}
                                                     onClick={() => {
                                                         handleNavigationClick(item.name);
-                                                        updateHeaderTitle(item.name);
                                                     }}
                                                     className={classNames(
                                                         item.current
@@ -138,9 +131,6 @@ export default function NavBar({ children, utilisateur }) {
                                                             {({ active }) => (
                                                                 <Link
                                                                     to={item.to}
-                                                                    onClick={() => {
-                                                                        updateHeaderTitle(item.name);
-                                                                    }}
                                                                     className={classNames(
                                                                         active ? 'bg-gray-100' : '',
                                                                         'block px-4 py-2 text-sm text-gray-700'
@@ -178,7 +168,6 @@ export default function NavBar({ children, utilisateur }) {
                                             key={item.name}
                                             onClick={() => {
                                                 handleNavigationClick(item.name);
-                                                updateHeaderTitle(item.name);
                                             }}
                                             className={classNames(
                                                 item.current
@@ -208,9 +197,6 @@ export default function NavBar({ children, utilisateur }) {
                                             <Link
                                                 key={item.name}
                                                 to={item.to}
-                                                onClick={() => {
-                                                    updateHeaderTitle(item.name);
-                                                }}
                                                 className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                                             >
                                                 {item.name}
