@@ -12,7 +12,7 @@ export function Dashboard() {
                 <div className={"lg:col-end-7 lg:col-span-2 lg:row-span-2 bg-white lg:rounded-md lg:block hidden"}>
                     <CompCarouselComponent />
                 </div>
-                <div className={"lg:col-end-7 lg:col-span-2 lg:row-span-4 bg-white lg:rounded-md overflow-y-auto lg:block hidden"}>
+                <div className={"lg:col-end-7 scrollbar lg:col-span-2 lg:row-span-4 bg-white lg:rounded-md overflow-y-auto lg:block hidden"}>
                     <ContactDashComponent />
                 </div>
             </div>

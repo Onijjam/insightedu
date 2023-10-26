@@ -31,10 +31,10 @@ export const CompDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className={"lg:col-span-4 lg:row-span-3 bg-white border-t-2 border-b-2 p-5 overflow-y-auto lg:rounded-bl-md lg:max-h-none max-h-64"}>
+                <div className={"lg:col-span-4 lg:row-span-3 bg-white border-t-2 border-b-2 p-5 overflow-y-auto scrollbar lg:rounded-bl-md lg:max-h-none max-h-64"}>
                     <CommentFeed />
                 </div>
-                <div className={"lg:row-start-1 lg:col-end-7 lg:col-span-2 lg:row-span-6 overflow-y-auto lg:border-l-2 max-h-64 bg-white p-5 lg:rounded-br-md lg:rounded-tr-md lg:rounded-bl-none sm:rounded-bl-md sm:rounded-br-md"}>
+                <div className={"lg:row-start-1 lg:col-end-7 lg:col-span-2 lg:row-span-6 overflow-y-auto scrollbar lg:border-l-2 lg:max-h-none max-h-64 bg-white p-5 lg:rounded-br-md lg:rounded-tr-md lg:rounded-bl-none sm:rounded-bl-md sm:rounded-br-md"}>
                     <UpdateFeed />
                 </div>
             </div>

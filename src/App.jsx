@@ -1,4 +1,3 @@
-import './App.css'
 import NavBar from "./components/NavBar.jsx"
 import {Login} from "./pages/Login.jsx";
 import { Outlet } from "react-router-dom";
