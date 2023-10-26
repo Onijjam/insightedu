@@ -1,8 +1,9 @@
 import {Fragment, useState} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from "./../assets/ICT-2020-LOGO-ISFEC-FRANCOIS-ASSISE.png"
 import {Link} from "react-router-dom";
+import NotificationsButton from "./NotificationsButton.jsx";
 
 const user = {
     name: 'Nom Utilisateur',
@@ -32,8 +33,7 @@ const navigationApprenant = [
     { name: 'Contact', to: '/contact', current: false },
 ]
 const userNavigation = [
-    { name: 'Votre Profil', to: '/' },
-    { name: 'Paramètres', to: '/' },
+    { name: 'Votre Profil', to: '/profil' },
     { name: 'Se déconnecter', to: '/' },
 ]
 
@@ -111,14 +111,7 @@ export default function NavBar({ children, utilisateur }) {
                                         </div>
                                     </div>
                                     <div className="hidden sm:ml-6 sm:flex sm:items-center">
-                                        <button
-                                            type="button"
-                                            className="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
-                                        >
-                                            <span className="absolute -inset-1.5" />
-                                            <span className="sr-only">View notifications</span>
-                                            <BellIcon className="h-6 w-6" aria-hidden="true" />
-                                        </button>
+                                        <NotificationsButton />
 
                                         {/* Profile dropdown */}
                                         <Menu as="div" className="relative ml-3">
@@ -207,14 +200,7 @@ export default function NavBar({ children, utilisateur }) {
                                             <div className="text-base font-medium text-gray-800">{user.name}</div>
                                             <div className="text-sm font-medium text-gray-500">{user.email}</div>
                                         </div>
-                                        <button
-                                            type="button"
-                                            className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
-                                        >
-                                            <span className="absolute -inset-1.5" />
-                                            <span className="sr-only">View notifications</span>
-                                            <BellIcon className="h-6 w-6" aria-hidden="true" />
-                                        </button>
+                                        <NotificationsButton />
                                     </div>
                                     <div className="mt-3 space-y-1">
                                         {userNavigation.map((item) => (

@@ -10,6 +10,7 @@ import {Competences} from "../pages/Competences.jsx";
 import {CompMineurs} from "../pages/CompMineurs.jsx";
 import {CompDetails} from "../pages/CompDetails.jsx";
 import ContactPage from "../pages/ContactPage.jsx";
+import {ProfilPage} from "../pages/ProfilPage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
             {
                 path: "/competences/details/",
                 element: <CompDetails />
+            },
+            {
+                path: "/profil",
+                element: <ProfilPage />
             },
         ]
     }
