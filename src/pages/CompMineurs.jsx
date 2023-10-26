@@ -221,7 +221,7 @@ export function CompMineurs() {
                                 <CircularProgressbar
                                     value={handleNote(competence.note).value}
                                     text={`${competence.note}`}
-                                    className="h-12 !w-fit flex-none rounded-full bg-gray-50"
+                                    className="h-12 !w-12 flex-none rounded-full bg-gray-50"
                                     styles={buildStyles({
                                         pathColor: handleNote(competence.note).pathColor,
                                         textColor: handleNote(competence.note).textColor,

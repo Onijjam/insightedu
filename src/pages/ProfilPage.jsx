@@ -174,7 +174,7 @@ export const ProfilPage = () => {
                     <div>
                         <h2 className="text-base font-semibold leading-7 text-gray-900">Supprimer votre compte</h2>
                         <p className="mt-1 text-sm leading-6 text-gray-400">
-                            Dans une mesure de RGPD, il est possible supprimer toutes vos informations ainsi que votre compte.
+                            Dans une mesure de RGPD, il est possible de supprimer toutes vos informations, ainsi que votre compte.
                             Cette mesure est définitive et aucune données ne pourras être récupéré.
                         </p>
                     </div>
