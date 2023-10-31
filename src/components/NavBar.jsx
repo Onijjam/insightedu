@@ -22,7 +22,7 @@ const navigationIsfec = [
 
 const navigationFormateur = [
     { name: 'Accueil', to: '/', current: true },
-    { name: 'Compétences', to: '/', current: false },
+    { name: 'Mon Parcours', to: '/', current: false },
     { name: 'Apprenants', to: '/', current: false },
     { name: 'Statistiques', to: '/', current: false },
     { name: 'Contact', to: '/', current: false },
@@ -30,8 +30,8 @@ const navigationFormateur = [
 
 const navigationApprenant = [
     { name: 'Accueil', to: '/', current: true },
-    { name: 'Compétences', to: '/competences', current: false },
-    { name: 'Contact', to: '/contact', current: false },
+    { name: 'Mon Parcours', to: '/competences', current: false },
+    { name: 'Équipe', to: '/contact', current: false },
 ]
 const userNavigation = [
     { name: 'Votre Profil', to: '/profil' },
@@ -71,7 +71,7 @@ export default function NavBar({ children, utilisateur }) {
                             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                                 <div className="flex h-16 justify-between">
                                     <div className="flex">
-                                        <Link to={"/"} className="flex flex-shrink-0 items-center">
+                                        <Link to={"/"} onClick={() => {handleNavigationClick("Accueil");}} className="flex flex-shrink-0 items-center">
                                             <img
                                                 className="block h-8 w-auto lg:hidden"
                                                 src={logo}

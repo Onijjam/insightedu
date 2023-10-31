@@ -42,7 +42,7 @@ export default function PasswordCreation() {
         <form className='bg-white rounded-md lg:shadow-xl lg:px-8'>
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                    <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                         Création d'un mot de passe
                     </h2>
                 </div>
@@ -51,7 +51,7 @@ export default function PasswordCreation() {
                     <form className="space-y-6" action="#" method="POST">
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                                Password
+                                Mot de passe
                             </label>
                             <div className="mt-2">
                                 <input
@@ -64,11 +64,11 @@ export default function PasswordCreation() {
                                     onChange={handleChangePassword}
                                 />
                             </div>
-                            <a className="text-sm text-gray-600">Le mot de passe doit contenir au moins : 8 caractères, 1 majuscules, 1 caractère spécial, 1 chiffre.</a>
+                            <a className="text-sm text-gray-600">Le mot de passe doit contenir au moins : 8 caractères, 1 majuscule, 1 caractère spécial, 1 chiffre.</a>
                             <div className="sm:col-span-6 pt-3">
                                 <div className="rounded-md mb-6 h-1 w-full bg-gray-200">
                                     <div
-                                        className={`rounded-md h-1 ${progression <= 33.33 ? "bg-red-600" : progression < 75 ? "bg-yellow-500" : "bg-green-600"
+                                        className={`rounded-md h-1 ${progression <= 33.33 ? "bg-red-500" : progression < 75 ? "bg-yellow-300" : progression < 80 ? "bg-green-500" : "bg-green-400"
                                             }`}
                                         style={{
                                             width: `${progression}%`,
@@ -82,7 +82,7 @@ export default function PasswordCreation() {
                         <div>
                             <div className="flex items-center justify-between">
                                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                                    Repeat password
+                                    Confirmer le mot de passe
                                 </label>
                             </div>
                             <div className="mt-2">

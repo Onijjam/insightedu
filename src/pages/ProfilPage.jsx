@@ -141,6 +141,7 @@ export const ProfilPage = () => {
                                         className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6"
                                     />
                                 </div>
+                                <a className="text-sm text-gray-600">Le mot de passe doit contenir au moins : 8 caractères, 1 majuscule, 1 caractère spécial, 1 chiffre.</a>
                             </div>
 
                             <div className="col-span-full">

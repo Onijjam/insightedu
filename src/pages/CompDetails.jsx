@@ -22,7 +22,7 @@ export const CompDetails = () => {
     return (
         <>
             <div className={"grid lg:grid-cols-6 lg:grid-rows-6 lg:h-[80vh] w-full"}>
-                <div className={"lg:col-span-4 lg:row-span-3 bg-white flex justify-center items-center sm:rounded-tl-md lg:rounded-tr-none sm:rounded-tr-md"}>
+                <div className={"lg:col-span-6 lg:row-span-3 bg-white flex justify-center p-5 items-center sm:rounded-tl-md sm:rounded-tr-md"}>
                     <div className={"flex lg:flex-row items-center lg:justify-around lg:w-full"}>
                         <ProgressBarCompDetail competenceNote={competenceNote}/>
                         <div className={"flex flex-col items-center justify-center p-5 text-center"}>
@@ -31,11 +31,8 @@ export const CompDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className={"lg:col-span-4 lg:row-span-3 bg-white border-t-2 border-b-2 p-5 overflow-y-auto scrollbar lg:rounded-bl-md lg:max-h-none max-h-64"}>
+                <div className={"lg:col-span-6 lg:row-span-3 bg-white border-t-2 p-5 overflow-y-auto scrollbar sm:rounded-bl-md sm:rounded-br-md lg:max-h-none max-h-96"}>
                     <CommentFeed />
-                </div>
-                <div className={"lg:row-start-1 lg:col-end-7 lg:col-span-2 lg:row-span-6 overflow-y-auto scrollbar lg:border-l-2 lg:max-h-none max-h-64 bg-white p-5 lg:rounded-br-md lg:rounded-tr-md lg:rounded-bl-none sm:rounded-bl-md sm:rounded-br-md"}>
-                    <UpdateFeed />
                 </div>
             </div>
         </>

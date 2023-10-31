@@ -57,7 +57,7 @@ export default function FormCompetences() {
                                 id={competence}
                                 name={competence}
                                 type="radio"
-                                className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue    -600"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
                             <label htmlFor="push-everything" className="block text-sm font-medium leading-6 text-gray-900">
                                 complètement novice
@@ -68,7 +68,7 @@ export default function FormCompetences() {
                                 id={competence}
                                 name={competence}
                                 type="radio"
-                                className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
                             <label htmlFor="push-email" className="block text-sm font-medium leading-6 text-gray-900">
                                 débutant
@@ -79,7 +79,7 @@ export default function FormCompetences() {
                                 id={competence}
                                 name={competence}
                                 type="radio"
-                                className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
                             <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
                             compétent
@@ -90,7 +90,7 @@ export default function FormCompetences() {
                                 id={competence}
                                 name={competence}
                                 type="radio"
-                                className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
                             <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
                                 expert
@@ -101,7 +101,7 @@ export default function FormCompetences() {
                                 id={competence}
                                 name={competence}
                                 type="radio"
-                                className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
                             <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
                                 ressources
@@ -112,7 +112,7 @@ export default function FormCompetences() {
             )
         })
         return (
-            <div key={index} className="border-b border-gray-900/50 pb-12">
+            <div key={index} className="border-b border-gray-900/15 pb-12">
                 <legend className="text-lg font-bold leading-6 text-gray-900">{Object.keys(ref)}</legend>
                 {listCompetence}
             </div>
@@ -132,7 +132,7 @@ export default function FormCompetences() {
                         <div className="!mt-2 flex items-center justify-end gap-x-6">
                             <button
                                 type="submit"
-                                className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                className="rounded-md bg-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
                             >
                                 Enregistrer
                             </button>

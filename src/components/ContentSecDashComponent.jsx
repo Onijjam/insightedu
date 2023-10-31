@@ -1,8 +1,9 @@
 import { UserGroupIcon,  ChartBarIcon} from '@heroicons/react/20/solid'
+import {Link} from "react-router-dom";
 
 export default function ContentSecDashComponent() {
     return (
-        <div className="relative">
+        <div className="lg:relative lg:block flex justify-center items-center">
                     <div className="md:pl-10 pl-4 pr-8 max-w-2xl pb-8 pt-4">
                         <p className="text-base font-semibold leading-7 text-cyan-500">InsightEdu</p>
                         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Votre Nouvelle plateforme de suivi</h1>
@@ -31,6 +32,14 @@ export default function ContentSecDashComponent() {
                   </span>
                                 </li>
                             </ul>
+                        </div>
+                        <div className={"w-full flex justify-center items-center lg:mt-5 mt-10"}>
+                            <Link to={"/competences"}
+                                type="button"
+                                className="rounded-full bg-cyan-500 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
+                            >
+                                Démarrer votre expérience
+                            </Link>
                         </div>
             </div>
         </div>

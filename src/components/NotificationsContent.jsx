@@ -1,81 +1,73 @@
-import { CheckIcon, XMarkIcon, ArrowPathIcon} from '@heroicons/react/20/solid'
-
-const timeline = [
+const activityItems = [
     {
-        id: 1,
-        content: "Votre niveau a été modifié par",
-        target: 'Nom formateur',
-        href: '#',
-        date: 'Oct 4',
-        datetime: '2020-10-04',
-        icon: ArrowPathIcon,
-        iconBackground: 'bg-gray-400',
+        user: {
+            name: 'Michael Loup',
+            imageUrl:
+                'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        projectName: 'Inscrire son action dans le cadre des principes fondamentaux du système éducatif et dans le cadre réglementaire de l\'école',
+        date: '1h',
+        dateTime: '2023-01-23T11:00',
     },
     {
-        id: 2,
-        content: "Votre niveau n'a pas été validé par",
-        target: 'Nom formateur',
-        href: '#',
-        date: 'Oct 4',
-        datetime: '2020-10-04',
-        icon: XMarkIcon,
-        iconBackground: 'bg-red-500',
+        user: {
+            name: 'Bérénice Sinclair',
+            imageUrl:
+                'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        projectName: 'Maîtriser la langue française dans le cadre de son enseignement',
+        date: '3h',
+        dateTime: '2023-01-23T09:00',
     },
     {
-        id: 3,
-        content: 'Votre niveau est validé par',
-        target: 'Nom formateur',
-        href: '#',
-        date: 'Sep 28',
-        datetime: '2020-09-28',
-        icon: CheckIcon,
-        iconBackground: 'bg-green-500',
+        user: {
+            name: 'Loïse Troct',
+            imageUrl:
+                'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        projectName: 'Coopérer avec les partenaires de l\'école',
+        date: '12h',
+        dateTime: '2023-01-23T00:00',
+    },
+    {
+        user: {
+            name: 'Loïse Troct',
+            imageUrl:
+                'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        projectName: 'Accompagner les élèves dans leur parcours de formation',
+        date: '2d',
+        dateTime: '2023-01-21T13:00',
+    },
+    {
+        user: {
+            name: 'Michael Loup',
+            imageUrl:
+                'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        projectName: 'Faire partager les valeurs de la République',
+        date: '5d',
+        dateTime: '2023-01-18T12:34',
     },
 ]
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-
 export default function NotificationsContent() {
     return (
-        <div className="flow-root">
-            <ul role="list" className="-mb-8">
-                {timeline.map((event, eventIdx) => (
-                    <li key={event.id}>
-                        <div className="relative pb-8">
-                            {eventIdx !== timeline.length - 1 ? (
-                                <span className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
-                            ) : null}
-                            <div className="relative flex space-x-3">
-                                <div>
-                  <span
-                      className={classNames(
-                          event.iconBackground,
-                          'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
-                      )}
-                  >
-                    <event.icon className="h-5 w-5 text-white" aria-hidden="true" />
-                  </span>
-                                </div>
-                                <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                                    <div>
-                                        <p className="text-sm text-gray-500">
-                                            {event.content}{' '}
-                                            <a href={event.href} className="font-medium text-gray-900">
-                                                {event.target}
-                                            </a>
-                                        </p>
-                                    </div>
-                                    <div className="whitespace-nowrap text-right text-sm text-gray-500">
-                                        <time dateTime={event.datetime}>{event.date}</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <ul role="list" className="divide-y divide-gray-100 w-full">
+            {activityItems.map((item) => (
+                <li key={item.commit} className="p-4 cursor-pointer hover:bg-gray-100">
+                    <div className="flex items-center gap-x-3">
+                        <img src={item.user.imageUrl} alt="" className="h-6 w-6 flex-none rounded-full bg-gray-800" />
+                        <h3 className="flex-auto truncate text-sm font-semibold leading-6 text-gray-900">{item.user.name}</h3>
+                        <time dateTime={item.dateTime} className="flex-none text-xs text-gray-500">
+                            {item.date}
+                        </time>
+                    </div>
+                    <p className="mt-3 truncate text-sm text-gray-500">
+                        A mis un commentaire sur <span className="text-gray-700 font-bold">{item.projectName}</span>
+                    </p>
+                </li>
+            ))}
+        </ul>
     )
 }

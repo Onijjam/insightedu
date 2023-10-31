@@ -5,7 +5,7 @@ import NotificationsContent from "./NotificationsContent.jsx";
 
 export default function NotificationsButton() {
     return (
-        <Popover className="relative">
+        <Popover className="relative mr-3">
             <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-500">
                 <BellIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -20,7 +20,7 @@ export default function NotificationsButton() {
                 leaveTo="opacity-0 translate-y-1"
             >
                 <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max sm:-translate-x-3/4 -translate-x-1/2 px-4">
-                    <div className="w-screen max-w-[19rem] max-h-[15rem] overflow-y-auto scrollbar-notifcations flex-auto rounded-3xl bg-white p-4 text-sm leading-6 shadow-lg ring-0 ring-gray-900/5">
+                    <div className="w-screen max-w-[19rem] max-h-[15rem] overflow-y-auto scrollbar-notifcations flex-auto rounded-3xl bg-white text-sm leading-6 shadow-lg ring-0 ring-gray-900/5">
                         <NotificationsContent />
                     </div>
                 </Popover.Panel>
