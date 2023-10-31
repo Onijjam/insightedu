@@ -5,7 +5,7 @@ import NotificationsContent from "./NotificationsContent.jsx";
 
 export default function NotificationsButton() {
     return (
-        <Popover className="relative mr-3">
+        <Popover className="relative">
             <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-500">
                 <BellIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>

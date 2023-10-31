@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from 'react'
+import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from "./../assets/ICT-2020-LOGO-ISFEC-FRANCOIS-ASSISE.png"
@@ -105,7 +105,10 @@ export default function NavBar({ children, utilisateur }) {
                                         </div>
                                     </div>
                                     <div className="hidden sm:ml-6 sm:flex sm:items-center">
-                                        <NotificationsButton />
+                                        <div className={"mr-3"}>
+                                            <NotificationsButton />
+                                        </div>
+
 
                                         {/* Profile dropdown */}
                                         <Menu as="div" className="relative ml-3">
@@ -190,7 +193,9 @@ export default function NavBar({ children, utilisateur }) {
                                             <div className="text-base font-medium text-gray-800">{user.name}</div>
                                             <div className="text-sm font-medium text-gray-500">{user.email}</div>
                                         </div>
-                                        <NotificationsButton />
+                                        <div className={"ml-3"}>
+                                            <NotificationsButton />
+                                        </div>
                                     </div>
                                     <div className="mt-3 space-y-1">
                                         {userNavigation.map((item) => (

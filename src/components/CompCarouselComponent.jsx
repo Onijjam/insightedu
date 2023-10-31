@@ -117,7 +117,7 @@ export const CompCarouselComponent = () => {
         return {
             name: titlesMap[key].name,
             title: titlesMap[key].title,
-            percentage, // Utilisez le pourcentage calculé
+            percentage,
             to: titlesMap[key].to,
         };
     });
@@ -125,7 +125,7 @@ export const CompCarouselComponent = () => {
     return (
         <Carousel slideInterval={3000} pauseOnHover>
             {people.map((competence) => (
-                    <div key={competence.title} className="w-full h-full bg-white flex flex-1 flex-col items-center p-4">
+                    <div key={competence.title} className="w-full h-full bg-white flex flex-1 flex-col justify-center items-center p-4">
                         <Link to={competence.to}>
                             <CircularProgressbar
                                 value={competence.percentage}
@@ -135,7 +135,7 @@ export const CompCarouselComponent = () => {
                                     pathColor: handleValue(competence.percentage).pathColor,
                                     textColor: handleValue(competence.percentage).textColor,})}
                             />
-                            <h3 className="mt-3 text-sm font-medium text-gray-900">{competence.name}</h3>
+                            <h3 className="mt-3 text-sm text-center font-medium text-gray-900 mb-4">{competence.name}</h3>
                         </Link>
                     </div>
             ))}

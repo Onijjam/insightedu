@@ -35,7 +35,7 @@ export default function ContactDashComponent() {
     return (
         <ul role="list" className="divide-y divide-gray-100 h-full">
             {people.map((person) => (
-                <li key={person.email} className="relative h-1/4 flex justify-between gap-x-6 py-5 px-2 hover:bg-gray-100">
+                <li key={person.email} className="relative h-1/4 flex justify-between items-center gap-x-6 py-5 px-2 hover:bg-gray-100">
                     <a href={`mailto:${person.email}`} className="flex min-w-0 gap-x-4">
                         <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" />
                         <div className="min-w-0 flex-auto">
