@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function PasswordCreation() {
+export default function PasswordCreation({onSuccess}) {
     const [progression, setProgression] = useState(0)
     const [password, setPassword] = useState('')
     const [repeatPassword, setRepeatPassword] = useState('')
@@ -31,6 +31,8 @@ export default function PasswordCreation() {
         event.preventDefault();
         if(password === repeatPassword){
             console.log("Mot de passe identique")
+            sessionStorage.setItem("PasswordChange", "true");
+            onSuccess();
         }
         else {
             setError(true)
@@ -39,7 +41,7 @@ export default function PasswordCreation() {
     };
 
     return (
-        <form className='bg-white rounded-md lg:shadow-xl lg:px-8'>
+        <form className='bg-white max-sm:h-full rounded-md lg:shadow-xl lg:px-8'>
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">

@@ -1,4 +1,4 @@
-export default function FormCompetences() {
+export default function FormCompetences({onSuccess}) {
 
     const competence = [
         {
@@ -46,6 +46,8 @@ export default function FormCompetences() {
                 ]
         }
     ]
+
+
     let listRef = competence.map((ref, index) => {
         let listCompetence = ref[Object.keys(ref)].map((competence, index) => {
             return (
@@ -119,18 +121,23 @@ export default function FormCompetences() {
         )
     })
 
-
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        sessionStorage.setItem("FirstTime", "false");
+        onSuccess();
+    };
 
     return (
-        <form className='bg-white rounded-md lg:shadow-xl lg:px-8'>
-            <h1 className="pt-5 text-2xl font-bold leading-7 text-gray-900">Formulaire de compétences</h1>
-            <p className="mt-5 text-md leading-6 text-gray-600">Remplissez le formulaire de compétences suivant en auto-évaluation sur les différentes sujets issues du référentiel </p>
+        <form className='bg-white mt-auto rounded-md lg:shadow-xl lg:px-8'>
+            <h1 className="pt-5 sm:pl-0 pl-2 text-2xl font-bold leading-7 text-gray-900">Formulaire de compétences</h1>
+            <p className="mt-5 sm:pl-0 pl-2 text-md leading-6 text-gray-600">Remplissez le formulaire de compétences suivant en auto-évaluation sur les différentes sujets issues du référentiel </p>
             <div className="space-y-12">
                 <div>
                     <div className="p-10 space-y-10">
                         {listRef}
                         <div className="!mt-2 flex items-center justify-end gap-x-6">
                             <button
+                                onClick={handleSubmit}
                                 type="submit"
                                 className="rounded-md bg-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
                             >

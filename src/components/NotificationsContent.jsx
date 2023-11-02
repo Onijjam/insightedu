@@ -1,3 +1,7 @@
+import {useNavigate} from "react-router-dom";
+import {useContext} from "react";
+import {Datacontext} from "../App.jsx";
+
 const activityItems = [
     {
         user: {
@@ -8,6 +12,8 @@ const activityItems = [
         projectName: 'Inscrire son action dans le cadre des principes fondamentaux du système éducatif et dans le cadre réglementaire de l\'école',
         date: '1h',
         dateTime: '2023-01-23T11:00',
+        note: 'C',
+        idMaj: 1
     },
     {
         user: {
@@ -18,6 +24,8 @@ const activityItems = [
         projectName: 'Maîtriser la langue française dans le cadre de son enseignement',
         date: '3h',
         dateTime: '2023-01-23T09:00',
+        note: 'R',
+        idMaj: 4
     },
     {
         user: {
@@ -28,6 +36,8 @@ const activityItems = [
         projectName: 'Coopérer avec les partenaires de l\'école',
         date: '12h',
         dateTime: '2023-01-23T00:00',
+        note: 'C',
+        idMaj: 3
     },
     {
         user: {
@@ -38,6 +48,8 @@ const activityItems = [
         projectName: 'Accompagner les élèves dans leur parcours de formation',
         date: '2d',
         dateTime: '2023-01-21T13:00',
+        note: 'D',
+        idMaj: 2
     },
     {
         user: {
@@ -48,14 +60,26 @@ const activityItems = [
         projectName: 'Faire partager les valeurs de la République',
         date: '5d',
         dateTime: '2023-01-18T12:34',
+        note: 'R',
+        idMaj: 1
     },
 ]
 
 export default function NotificationsContent() {
+    const navigate = useNavigate();
+    const { setCompetenceMaj, setCompetenceMin, setCompetenceNote } = useContext(Datacontext);
+    const handleButtonEvent = (idCompMaj, NomCompMin, CompNote) => {
+        setCompetenceMaj(idCompMaj);
+        setCompetenceMin(NomCompMin);
+        setCompetenceNote(CompNote);
+        navigate("/competences/details/");
+
+    }
+
     return (
         <ul role="list" className="divide-y divide-gray-100 w-full">
             {activityItems.map((item) => (
-                <li key={item.commit} className="p-4 cursor-pointer hover:bg-gray-100">
+                <li key={item.commit} className="p-4 cursor-pointer hover:bg-gray-100" onClick={() => handleButtonEvent(item.idMaj, item.projectName, item.note)}>
                     <div className="flex items-center gap-x-3">
                         <img src={item.user.imageUrl} alt="" className="h-6 w-6 flex-none rounded-full bg-gray-800" />
                         <h3 className="flex-auto truncate text-sm font-semibold leading-6 text-gray-900">{item.user.name}</h3>
