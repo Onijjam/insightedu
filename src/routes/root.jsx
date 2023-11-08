@@ -3,27 +3,62 @@ import {Dashboard} from "../pages/Dashboard.jsx";
 import {ContactSupport} from "../pages/ContactSupport.jsx";
 import App from "../App.jsx";
 import {ErrorPage} from "../pages/ErrorPage.jsx";
-import {Sidebar} from "../components/Sidebar.jsx";
+import FormCompetences from "../pages/FormCompetences.jsx";
+import PasswordCreation from "../pages/PasswordCreation.jsx";
+import NavBar from "../components/NavBar.jsx";
+import {Competences} from "../pages/Competences.jsx";
+import {CompMineurs} from "../pages/CompMineurs.jsx";
+import {CompDetails} from "../pages/CompDetails.jsx";
+import ContactPage from "../pages/ContactPage.jsx";
+import {ProfilPage} from "../pages/ProfilPage.jsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         errorElement: (
-            <Sidebar>
+            <NavBar>
                 <div className={"bg-gray-900/10 w-full h-full rounded-md lg:p-5"}>
                     <ErrorPage />
                 </div>
-            </Sidebar>
+            </NavBar>
         ),
         children: [
             {
                 path: "/",
-                element: <Dashboard />
+                element: <Dashboard/>
             },
             {
                 path: "/contact-support",
                 element: <ContactSupport />
+            },
+            {
+                path: "/contact",
+                element: <ContactPage />
+            },
+            {
+                path: "/form-competences",
+                element: <FormCompetences />
+            },
+            {
+                path: "/password-creation",
+                element: <PasswordCreation />
+            },
+            {
+                path: "/competences",
+                element: <Competences />
+            },
+            {
+                path: "/competences/:major",
+                element: <CompMineurs />
+            },
+            {
+                path: "/competences/details/",
+                element: <CompDetails />
+            },
+            {
+                path: "/profil",
+                element: <ProfilPage />
             },
         ]
     }
