@@ -6,6 +6,29 @@ export default function BreadCrumb() {
     const [pages, setPages] = useState([]);
     const location = useLocation();
 
+    const titlesMap = {
+        educationPublique: {
+            name: "Service public d'éducation",
+            title: "service-edu",
+        },
+        educationReussite: {
+            name: 'Service de la réussite de tous les élèves',
+            title: 'reussite-edu',
+        },
+        educationActeur: {
+            name: 'Acteurs de la communauté éducative',
+            title: 'communaute-edu',
+        },
+        educationSavoirs: {
+            name: 'Porteur de savoirs et d\'une culture commune',
+            title: 'savoir-edu',
+        },
+        educationExpert: {
+            name: 'Experts des apprentissages',
+            title: 'expert-edu',
+        },
+    };
+
     useEffect(() => {
         let paths = location.pathname.split("/");
 
@@ -16,8 +39,20 @@ export default function BreadCrumb() {
 
         //for each path add a page 
         setPages(paths.map((path, index) => {
+            // to get the name of the skill corresponding to the path
+            for (const [key, value] of Object.entries(titlesMap)) {
+                if (value.title === path) {
+                    return {
+                        name: value.name,
+                        href: `/${paths.slice(0, index + 1).join("/")}`,
+                        current: index === paths.length - 1
+                    }
+                }
+            }
+
+            if(path == "competences") path = "Mon Parcours";
             return {
-                name: path,
+                name: path.charAt(0).toUpperCase() + path.slice(1),
                 href: `/${paths.slice(0, index + 1).join("/")}`,
                 current: index === paths.length - 1
             }

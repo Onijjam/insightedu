@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from "./../assets/ICT-2020-LOGO-ISFEC-FRANCOIS-ASSISE.png"
@@ -61,6 +61,22 @@ export default function NavBar({ children, utilisateur }) {
             })
         );
     };
+
+    let paths = location.pathname.split("/");
+    let currentPath = "/" + paths[paths.length - 1];
+    
+    // To set the current page while navigating through the the breadcrumb
+    useEffect(() => {
+        setNavigation((prevNavigation) =>
+            prevNavigation.map((item) => {
+                if (item.to === currentPath) {
+                    return { ...item, current: true };
+                } else {
+                    return { ...item, current: false };
+                }
+            })
+        );
+    }, [currentPath]);
 
     return (
         <>
@@ -172,11 +188,12 @@ export default function NavBar({ children, utilisateur }) {
                                             onClick={() => {
                                                 handleNavigationClick(item.name);
                                             }}
-                                            className={classNames(
+                                            className={
+                                                classNames(
                                                 item.current
                                                     ? 'border-cyan-500 bg-cyan-50 text-cyan-700'
                                                     : 'border-transparent text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800',
-                                                'block border-l-4 py-2 pl-3 pr-4 text-base font-medium'
+                                                'block border-l-4 py-2 pl-3 pr-4 text-base font-medium'                 
                                             )}
                                             aria-current={item.current ? 'page' : undefined}
                                         >
