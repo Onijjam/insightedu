@@ -54,6 +54,7 @@ export default function NavBar({ children, utilisateur, disconnect }) {
         setNavigation((prevNavigation) =>
             prevNavigation.map((item) => {
                 if (item.name === clickedItemName) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                     return { ...item, current: true };
                 } else {
                     return { ...item, current: false };
