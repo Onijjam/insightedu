@@ -6,8 +6,9 @@ import NotificationsContent from "./NotificationsContent.jsx";
 export default function NotificationsButton() {
     return (
         <Popover className="relative">
-            <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-500">
+            <Popover.Button className="relative inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-500">
                 <BellIcon className="h-6 w-6" aria-hidden="true" />
+                <div className={'absolute h-1.5 w-1.5 rounded-full bg-red-500 top-1 right-1'}></div>
             </Popover.Button>
 
             <Transition

@@ -43,7 +43,7 @@ function classNames(...classes) {
 }
 
 // eslint-disable-next-line react/prop-types
-export default function NavBar({ children, utilisateur }) {
+export default function NavBar({ children, utilisateur, disconnect }) {
     const [navigation, setNavigation] = useState(
         utilisateur === "formateur" ? navigationFormateur :
             utilisateur === "isfec" ? navigationIsfec :
@@ -150,6 +150,9 @@ export default function NavBar({ children, utilisateur }) {
                                                             {({ active }) => (
                                                                 <Link
                                                                     to={item.to}
+                                                                    onClick={() => {
+                                                                        item.name === "Se déconnecter" ? (disconnect()) : null;
+                                                                    }}
                                                                     className={classNames(
                                                                         active ? 'bg-gray-100' : '',
                                                                         'block px-4 py-2 text-sm text-gray-700'
@@ -219,6 +222,9 @@ export default function NavBar({ children, utilisateur }) {
                                             <Link
                                                 key={item.name}
                                                 to={item.to}
+                                                onClick={() => {
+                                                    item.name === "Se déconnecter" ? (disconnect()) : null;
+                                                }}
                                                 className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                                             >
                                                 {item.name}

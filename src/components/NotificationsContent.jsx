@@ -13,6 +13,7 @@ const activityItems = [
         date: '1h',
         dateTime: '2023-01-23T11:00',
         note: 'C',
+        new: true,
         idMaj: 1
     },
     {
@@ -25,6 +26,7 @@ const activityItems = [
         date: '3h',
         dateTime: '2023-01-23T09:00',
         note: 'R',
+        new: true,
         idMaj: 4
     },
     {
@@ -37,6 +39,7 @@ const activityItems = [
         date: '12h',
         dateTime: '2023-01-23T00:00',
         note: 'C',
+        new: false,
         idMaj: 3
     },
     {
@@ -49,6 +52,7 @@ const activityItems = [
         date: '2d',
         dateTime: '2023-01-21T13:00',
         note: 'D',
+        new: false,
         idMaj: 2
     },
     {
@@ -61,6 +65,7 @@ const activityItems = [
         date: '5d',
         dateTime: '2023-01-18T12:34',
         note: 'R',
+        new: false,
         idMaj: 1
     },
 ]
@@ -79,15 +84,19 @@ export default function NotificationsContent() {
     return (
         <ul role="list" className="divide-y divide-gray-100 w-full">
             {activityItems.map((item) => (
-                <li key={item.commit} className="p-4 cursor-pointer hover:bg-gray-100" onClick={() => handleButtonEvent(item.idMaj, item.projectName, item.note)}>
+                <li key={item.commit} className={`p-4 cursor-pointer hover:bg-gray-100`} onClick={() => handleButtonEvent(item.idMaj, item.projectName, item.note)}>
                     <div className="flex items-center gap-x-3">
                         <img src={item.user.imageUrl} alt="" className="h-6 w-6 flex-none rounded-full bg-gray-800" />
                         <h3 className="flex-auto truncate text-sm font-semibold leading-6 text-gray-900">{item.user.name}</h3>
-                        <time dateTime={item.dateTime} className="flex-none text-xs text-gray-500">
+                        <time dateTime={item.dateTime} className="relative flex-none text-xs text-gray-500">
                             {item.date}
+                            {item.new ?
+                                <div className={'absolute h-1.5 w-1.5 rounded-full bg-red-500 top-0 -right-1'}></div>
+                                : null
+                            }
                         </time>
                     </div>
-                    <p className="mt-3 truncate text-sm text-gray-500">
+                    <p className="mt-3 truncate text-sm text-gray-500" title={'A mis un commentaire sur ' + item.projectName}>
                         A mis un commentaire sur <span className="text-gray-700 font-bold">{item.projectName}</span>
                     </p>
                 </li>
