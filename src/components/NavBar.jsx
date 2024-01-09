@@ -185,7 +185,7 @@ export default function NavBar({ children, utilisateur, disconnect }) {
                             <Disclosure.Panel className="sm:hidden">
                                 <div className="space-y-1 pb-3 pt-2">
                                     {navigation.map((item) => (
-                                        <Link
+                                        <Disclosure.Button as={Link}
                                             to={item.to}
                                             key={item.name}
                                             onClick={() => {
@@ -201,7 +201,7 @@ export default function NavBar({ children, utilisateur, disconnect }) {
                                             aria-current={item.current ? 'page' : undefined}
                                         >
                                             {item.name}
-                                        </Link>
+                                        </Disclosure.Button>
                                     ))}
                                 </div>
                                 <div className="border-t border-gray-200 pb-3 pt-4">
