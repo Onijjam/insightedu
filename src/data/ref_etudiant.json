@@ -1,46 +1,46 @@
 [
     {
         "Compétences communes à tous les professeurs et les personnels d'éducation, acteurs du service public d'éducation":
-            [
-                "Faire partager les valeurs de la République",
-                "Inscrire son action dans le cadre des principes fondamentaux du système éducatif et dans le liscadre réglementaire de l'école"
-            ]
+            {
+                "Faire partager les valeurs de la République" : "0",
+                "Inscrire son action dans le cadre des principes fondamentaux du système éducatif et dans le liscadre réglementaire de l'école" : "0"
+            }
     },
     {
         "Compétences communes à tous les professeurs et les personnels d'éducation, pédagogues et éducateurs au service de la réussite de tous les élèves":
-            [
-                "Connaître les élèves et les processus d'apprentissage",
-                "Prendre en compte la diversité des élèves",
-                "Accompagner les élèves dans leur parcours de formation",
-                "Agir en éducateur responsable et selon des principes éthiques",
-                "Maîtriser la langue française à des fins de communication",
-                "Utiliser une langue vivante étrangère dans les situations exigées par son métier",
-                "Intégrer les éléments de la culture numérique nécessaires à l'exercice de son métier"
-            ]
+            {
+                "Connaître les élèves et les processus d'apprentissage" : "0",
+                "Prendre en compte la diversité des élèves" : "0",
+                "Accompagner les élèves dans leur parcours de formation" : "0",
+                "Agir en éducateur responsable et selon des principes éthiques" : "0",
+                "Maîtriser la langue française à des fins de communication" : "0",
+                "Utiliser une langue vivante étrangère dans les situations exigées par son métier" : "0",
+                "Intégrer les éléments de la culture numérique nécessaires à l'exercice de son métier" : "0"
+            }
     },
     {
         "Compétences communes à tous les professeurs et les personnels d'éducation, acteurs de la communauté éducative":
-            [
-                "Coopérer au sein d'une équipe",
-                "Contribuer à l'action de la communauté éducative",
-                "Coopérer avec les parents d'élèves",
-                "Coopérer avec les partenaires de l'école",
-                "S'engager dans une démarche individuelle et collective de développement professionnel"
-            ]
+            {
+                "Coopérer au sein d'une équipe" : "0",
+                "Contribuer à l'action de la communauté éducative" : "0",
+                "Coopérer avec les parents d'élèves" : "0",
+                "Coopérer avec les partenaires de l'école" : "0",
+                "S'engager dans une démarche individuelle et collective de développement professionnel" : "0"
+            }
     },
     {
         "Compétences communes à tous les professeurs, professionnels porteurs de savoirs et d'une culture commune":
-            [
-                "Maîtriser les savoirs disciplinaires et leur didactique",
-                "Maîtriser la langue française dans le cadre de son enseignement"
-            ]
+            {
+                "Maîtriser les savoirs disciplinaires et leur didactique" : "0",
+                "Maîtriser la langue française dans le cadre de son enseignement" : "0"
+            }
     },
     {
         "Compétences communes à tous les professeurs, praticiens experts des apprentissages":
-            [
-                "Construire, mettre en œuvre et animer des situations d'enseignement et d'apprentissage prenant en compte la diversité des élèves",
-                "Organiser et assurer un mode de fonctionnement du groupe favorisant l'apprentissage et la socialisation des élèves",
-                "Évaluer les progrès et les acquisitions des élèves"
-            ]
+            {
+                "Construire, mettre en œuvre et animer des situations d'enseignement et d'apprentissage prenant en compte la diversité des élèves" : "0",
+                "Organiser et assurer un mode de fonctionnement du groupe favorisant l'apprentissage et la socialisation des élèves" : "0",
+                "Évaluer les progrès et les acquisitions des élèves" : "0"
+            }
     }
 ]

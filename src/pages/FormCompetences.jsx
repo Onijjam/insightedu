@@ -3,19 +3,19 @@ import competenceChef from "../data/referentiel_chef.json";
 import competenceEtudiant from "../data/ref_etudiant.json";
 
 export default function FormCompetences({onSuccess}) {
-    const [role, setRole] = useState("etudiant");
-
+    const [role, setRole] = useState("chef");
     
-    let listRefEtudiant = competenceEtudiant.map((ref, index) => {
-        let listCompetenceEtudiant = ref[Object.keys(ref)].map((competence, index) => {
+    let listRefEtudiant = competenceEtudiant.map((competences, index) => {
+        const [competence, sousCompetences] = Object.entries(competences)[0];
+        let listCompetenceEtudiant = Object.keys(sousCompetences).map((nom, index) => {
             return (
                 <fieldset key={index}>
-                    <p className="mt-1 text-md leading-6 text-gray-600 font-semibold mt-5">{competence}</p>
+                    <p className="mt-1 text-md leading-6 text-gray-600 font-semibold mt-5">{nom}</p>
                     <div className="mt-6 space-y-6">
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -25,8 +25,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -36,8 +36,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -47,8 +47,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -58,8 +58,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3  pb-10">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -73,22 +73,23 @@ export default function FormCompetences({onSuccess}) {
         })
         return (
             <div key={index} className="border-b border-gray-900/15 pb-12">
-                <legend className="text-lg font-bold leading-6 text-gray-900">{Object.keys(ref)}</legend>
+                <legend className="text-lg font-bold leading-6 text-gray-900">{competence}</legend>
                 {listCompetenceEtudiant}
             </div>
         )
     })
 
-    let listRefChef = competenceChef.map((ref, index) => {
-        let listCompetenceChef = ref[Object.keys(ref)].map((competence, index) => {
+    let listRefChef = competenceChef.map((competences, index) => {
+        const [competence, sousCompetences] = Object.entries(competences)[0];
+        let listCompetenceChef = Object.keys(sousCompetences).map((nom, index) => {
             return (
                 <fieldset key={index}>
-                    <p className="mt-1 text-md leading-6 text-gray-600 font-semibold mt-5">{competence}</p>
+                    <p className="mt-1 text-md leading-6 text-gray-600 font-semibold mt-5">{nom}</p>
                     <div className="mt-6 space-y-6">
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -98,8 +99,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -109,8 +110,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -120,8 +121,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -131,8 +132,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3  pb-10">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -146,7 +147,7 @@ export default function FormCompetences({onSuccess}) {
         })
         return (
             <div key={index} className="border-b border-gray-900/15 pb-12">
-                <legend className="text-lg font-bold leading-6 text-gray-900">{Object.keys(ref)}</legend>
+                <legend className="text-lg font-bold leading-6 text-gray-900">{competence}</legend>
                 {listCompetenceChef}
             </div>
         )
