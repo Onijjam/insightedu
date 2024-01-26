@@ -2,49 +2,49 @@
     {
        "CONSTRUIRE UN PARCOURS DE FORMATION HYBRIDE" :
        {
-        "Analyser la commande, le cahier des charges" : "0",
-        "Scénariser un parcours de formation développant les compétences visées" : "0",
-        "Concevoir des situations de formation diversifiées, présentielles, distancielles, en situation de travail (AFEST)" : "0",
-        "Créer des ressources et des activités adaptées aux modalités et objectifs de formation" : "0",
-        "Intégrer les modalités de l'ingéniérie de la distance pour améliorer la montée en compétence de tous les apprenants" : "0",
-        "Adapter le parcours aux caractéristiques de l'adulte apprenant à chaque moment de la conception" : "0"
+        "Analyser la commande, le cahier des charges" : "N",
+        "Scénariser un parcours de formation développant les compétences visées" : "N",
+        "Concevoir des situations de formation diversifiées, présentielles, distancielles, en situation de travail (AFEST)" : "N",
+        "Créer des ressources et des activités adaptées aux modalités et objectifs de formation" : "N",
+        "Intégrer les modalités de l'ingéniérie de la distance pour améliorer la montée en compétence de tous les apprenants" : "N",
+        "Adapter le parcours aux caractéristiques de l'adulte apprenant à chaque moment de la conception" : "N"
        }
     },  
     { 
        "ANIMER DES  ACTIONS DE FORMATION A L'AIDE DE METHODES ACTIVES EN CONTEXTE PEDAGOGIQUE" : 
        {
-        "Rendre les stagiaires acteurs de la formation et maintenir la participation" : "0",
-        "Organiser des méthodes actives adaptées développant les compétences" : "0",
-        "Ancrer les formations dans le réel pour tenir compte de l'adulte en formation" : "0",
-        "Créer des communautés d'apprentissage" : "0",
-        "s'adapter pour répondre aux attentes et aux besoins à chaque étape de l'action de formation" : "0"
+        "Rendre les stagiaires acteurs de la formation et maintenir la participation" : "N",
+        "Organiser des méthodes actives adaptées développant les compétences" : "N",
+        "Ancrer les formations dans le réel pour tenir compte de l'adulte en formation" : "N",
+        "Créer des communautés d'apprentissage" : "N",
+        "s'adapter pour répondre aux attentes et aux besoins à chaque étape de l'action de formation" : "N"
        }
     },
     {
        "FAIRE VIVRE LES VALEURS DE L'ISFEC François d'Assise" :
        {
-        "Reconnnaitre l'autre" : "0",
-        "Faire preuve d'une bienveillance exigeante" : "0",
-        "S'appuyer sur et tenir compte du collectif de formateurs" : "0",
-        "Incarner le caractère propre" : "0",
-        "Etre en recherche" : "0"
+        "Reconnnaitre l'autre" : "N",
+        "Faire preuve d'une bienveillance exigeante" : "N",
+        "S'appuyer sur et tenir compte du collectif de formateurs" : "N",
+        "Incarner le caractère propre" : "N",
+        "Etre en recherche" : "N"
        }
     },
     {
        "EVALUER pour faire réfléchir, différencier, réguler, faire apprendre)" :
        {
-        "Evaluer des besoins de formation" : "0",
-        "Intégrer les formes d'évaluation aux différentes étapes pour favoriser l'apprentissage" : "0",
-        "Evaluer l'action de formation" : "0"
+        "Evaluer des besoins de formation" : "N",
+        "Intégrer les formes d'évaluation aux différentes étapes pour favoriser l'apprentissage" : "N",
+        "Evaluer l'action de formation" : "N"
        }
     },
     {
        "Adopter une POSTURE d'accompagnateur pour passer du face à face au côte à côte" :
        {
-        "Dynamiser" : "0",
-        "Soutenir" : "0",
-        "Guider, conseiller" : "0",
-        "Adopter une posture de facilitateur" : "0"
+        "Dynamiser" : "N",
+        "Soutenir" : "N",
+        "Guider, conseiller" : "N",
+        "Adopter une posture de facilitateur" : "N"
        }
     }
 ]
