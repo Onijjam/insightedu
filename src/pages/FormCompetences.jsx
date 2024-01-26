@@ -1,63 +1,21 @@
+import React, {useState} from "react";
+import competenceChef from "../data/referentiel_chef.json";
+import competenceEtudiant from "../data/ref_etudiant.json";
+
 export default function FormCompetences({onSuccess}) {
-
-    const competence = [
-        {
-            "Compétences communes à tous les professeurs et les personnels d'éducation, acteurs du service public d'éducation":
-                [
-                    "Faire partager les valeurs de la République",
-                    "Inscrire son action dans le cadre des principes fondamentaux du système éducatif et dans le liscadre réglementaire de l'école"
-                ]
-        },
-        {
-            "Compétences communes à tous les professeurs et les personnels d'éducation, pédagogues et éducateurs au service de la réussite de tous les élèves":
-                [
-                    "Connaître les élèves et les processus d'apprentissage",
-                    "Prendre en compte la diversité des élèves",
-                    "Accompagner les élèves dans leur parcours de formation",
-                    "Agir en éducateur responsable et selon des principes éthiques",
-                    "Maîtriser la langue française à des fins de communication",
-                    "Utiliser une langue vivante étrangère dans les situations exigées par son métier",
-                    "Intégrer les éléments de la culture numérique nécessaires à l'exercice de son métier"
-                ]
-        },
-        {
-            "Compétences communes à tous les professeurs et les personnels d'éducation, acteurs de la communauté éducative":
-                [
-                    "Coopérer au sein d'une équipe",
-                    "Contribuer à l'action de la communauté éducative",
-                    "Coopérer avec les parents d'élèves",
-                    "Coopérer avec les partenaires de l'école",
-                    "S'engager dans une démarche individuelle et collective de développement professionnel",
-                ]
-        },
-        {
-            "Compétences communes à tous les professeurs, professionnels porteurs de savoirs et d'une culture commune":
-                [
-                    "Maîtriser les savoirs disciplinaires et leur didactique",
-                    "Maîtriser la langue française dans le cadre de son enseignement"
-                ]
-        },
-        {
-            "Compétences communes à tous les professeurs, praticiens experts des apprentissages":
-                [
-                    "Construire, mettre en œuvre et animer des situations d'enseignement et d'apprentissage prenant en compte la diversité des élèves",
-                    "Organiser et assurer un mode de fonctionnement du groupe favorisant l'apprentissage et la socialisation des élèves",
-                    "Évaluer les progrès et les acquisitions des élèves"
-                ]
-        }
-    ]
-
-
-    let listRef = competence.map((ref, index) => {
-        let listCompetence = ref[Object.keys(ref)].map((competence, index) => {
+    const [role, setRole] = useState("chef");
+    
+    let listRefEtudiant = competenceEtudiant.map((competences, index) => {
+        const [competence, sousCompetences] = Object.entries(competences)[0];
+        let listCompetenceEtudiant = Object.keys(sousCompetences).map((nom, index) => {
             return (
                 <fieldset key={index}>
-                    <p className="mt-1 text-md leading-6 text-gray-600 font-semibold mt-5">{competence}</p>
+                    <p className="mt-1 text-md leading-6 text-gray-600 font-semibold mt-5">{nom}</p>
                     <div className="mt-6 space-y-6">
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -67,8 +25,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -78,8 +36,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -89,8 +47,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -100,8 +58,8 @@ export default function FormCompetences({onSuccess}) {
                         </div>
                         <div className="flex items-center gap-x-3  pb-10">
                             <input
-                                id={competence}
-                                name={competence}
+                                id={nom}
+                                name={nom}
                                 type="radio"
                                 className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
                             />
@@ -115,8 +73,82 @@ export default function FormCompetences({onSuccess}) {
         })
         return (
             <div key={index} className="border-b border-gray-900/15 pb-12">
-                <legend className="text-lg font-bold leading-6 text-gray-900">{Object.keys(ref)}</legend>
-                {listCompetence}
+                <legend className="text-lg font-bold leading-6 text-gray-900">{competence}</legend>
+                {listCompetenceEtudiant}
+            </div>
+        )
+    })
+
+    let listRefChef = competenceChef.map((competences, index) => {
+        const [competence, sousCompetences] = Object.entries(competences)[0];
+        let listCompetenceChef = Object.keys(sousCompetences).map((nom, index) => {
+            return (
+                <fieldset key={index}>
+                    <p className="mt-1 text-md leading-6 text-gray-600 font-semibold mt-5">{nom}</p>
+                    <div className="mt-6 space-y-6">
+                        <div className="flex items-center gap-x-3">
+                            <input
+                                id={nom}
+                                name={nom}
+                                type="radio"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
+                            />
+                            <label htmlFor="push-everything" className="block text-sm font-medium leading-6 text-gray-900">
+                                complètement novice
+                            </label>
+                        </div>
+                        <div className="flex items-center gap-x-3">
+                            <input
+                                id={nom}
+                                name={nom}
+                                type="radio"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
+                            />
+                            <label htmlFor="push-email" className="block text-sm font-medium leading-6 text-gray-900">
+                                débutant
+                            </label>
+                        </div>
+                        <div className="flex items-center gap-x-3">
+                            <input
+                                id={nom}
+                                name={nom}
+                                type="radio"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
+                            />
+                            <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
+                            compétent
+                            </label>
+                        </div>
+                        <div className="flex items-center gap-x-3">
+                            <input
+                                id={nom}
+                                name={nom}
+                                type="radio"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
+                            />
+                            <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
+                                expert
+                            </label>
+                        </div>
+                        <div className="flex items-center gap-x-3  pb-10">
+                            <input
+                                id={nom}
+                                name={nom}
+                                type="radio"
+                                className="h-4 w-4 border-gray-300 text-cyan-500 focus:ring-cyan-500"
+                            />
+                            <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
+                                ressources
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            )
+        })
+        return (
+            <div key={index} className="border-b border-gray-900/15 pb-12">
+                <legend className="text-lg font-bold leading-6 text-gray-900">{competence}</legend>
+                {listCompetenceChef}
             </div>
         )
     })
@@ -128,13 +160,13 @@ export default function FormCompetences({onSuccess}) {
     };
 
     return (
-        <form className='bg-white mt-auto rounded-md lg:shadow-xl lg:px-8'>
+        <form className='bg-white mt-auto rounded-md w-full lg:shadow-xl lg:px-8'>
             <h1 className="pt-5 sm:pl-0 pl-2 text-2xl font-bold leading-7 text-gray-900">Formulaire de compétences</h1>
             <p className="mt-5 sm:pl-0 pl-2 text-md leading-6 text-gray-600">Remplissez le formulaire de compétences suivant en auto-évaluation sur les différentes sujets issues du référentiel </p>
             <div className="space-y-12">
                 <div>
                     <div className="p-10 space-y-10">
-                        {listRef}
+                        {role === "etudiant" ? listRefEtudiant : (role === "chef" ? listRefChef : listRefEtudiant)}
                         <div className="!mt-2 flex items-center justify-end gap-x-6">
                             <button
                                 onClick={handleSubmit}
