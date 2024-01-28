@@ -36,27 +36,27 @@ const titlesMap = {
     educationPublique: {
         name: "Service public d'éducation",
         title: "Les professeurs et les professionnels d'éducation",
-        to: '/competences/service-edu',
+        to: '/parcours/competences/service-edu',
     },
     educationReussite: {
         name: 'Service de la réussite de tous les élèves',
         title: 'Les professeurs et les competencenels d\'éducation, pédagogues et éducateurs',
-        to: '/competences/reussite-edu',
+        to: '/parcours/competences/reussite-edu',
     },
     educationActeur: {
         name: 'Acteurs de la communauté éducative',
         title: 'Les professeurs et les competencenels d\'éducation',
-        to: '/competences/communaute-edu',
+        to: '/parcours/competences/communaute-edu',
     },
     educationSavoirs: {
         name: 'Porteur de savoirs et d\'une culture commune',
         title: 'Les professeurs et les professionnels',
-        to: '/competences/savoir-edu',
+        to: '/parcours/competences/savoir-edu',
     },
     educationExpert: {
         name: 'Experts des apprentissages',
         title: 'Les professeurs et praticiens',
-        to: '/competences/expert-edu',
+        to: '/parcours/competences/expert-edu',
     },
 };
 export const CompCarouselComponent = () => {

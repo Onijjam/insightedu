@@ -11,6 +11,8 @@ import {CompMineurs} from "../pages/CompMineurs.jsx";
 import {CompDetails} from "../pages/CompDetails.jsx";
 import ContactPage from "../pages/ContactPage.jsx";
 import {ProfilPage} from "../pages/ProfilPage.jsx";
+import {Evolution} from "../pages/Evolution.jsx";
+import {MonParcours} from "../pages/MonParcours.jsx";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
                 element: <ContactSupport />
             },
             {
+                path: "/parcours/evolution",
+                element: <Evolution/>
+            },
+            {
+                path: "/parcours",
+                element: <MonParcours/>
+            },
+            {
                 path: "/contact",
                 element: <ContactPage />
             },
@@ -45,15 +55,15 @@ const router = createBrowserRouter([
                 element: <PasswordCreation />
             },
             {
-                path: "/competences",
+                path: "/parcours/competences",
                 element: <Competences />
             },
             {
-                path: "/competences/:major",
+                path: "/parcours/competences/:major",
                 element: <CompMineurs />
             },
             {
-                path: "/competences/details/",
+                path: "/parcours/competences/details/",
                 element: <CompDetails />
             },
             {

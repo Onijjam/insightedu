@@ -205,7 +205,7 @@ export function CompMineurs() {
         setCompetenceMaj(idCompMaj);
         setCompetenceMin(NomCompMin);
         setCompetenceNote(CompNote);
-        navigate("/competences/details/");
+        navigate("/parcours/competences/details/");
 
     }
 
@@ -216,7 +216,7 @@ export function CompMineurs() {
                 className="divide-y divide-gray-100 overflow-hidden bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl"
             >
                 {handleComp(major).map((competence) => (
-                        <li key={competence.email} className="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-gray-50 sm:px-6">
+                        <li key={competence.name} className="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-gray-50 sm:px-6">
                             <button onClick={() => handleButtonEvent(competence.idMaj, competence.name, competence.note)} className="flex items-center min-w-0 gap-x-4">
                                 <CircularProgressbar
                                     value={handleNote(competence.note).value}
@@ -228,7 +228,7 @@ export function CompMineurs() {
                                     })}
                                 />
                                 <div className="min-w-0 flex-auto">
-                                    <p className="text-sm mt-3 font-semibold leading-6 text-gray-900">
+                                    <p className="text-sm font-semibold leading-6 text-gray-900">
                                         <a href={competence.href}>
                                             <span className="absolute inset-x-0 -top-px bottom-0" />
                                             {competence.name}
