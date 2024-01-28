@@ -77,7 +77,7 @@ export default function NotificationsContent() {
         setCompetenceMaj(idCompMaj);
         setCompetenceMin(NomCompMin);
         setCompetenceNote(CompNote);
-        navigate("/competences/details/");
+        navigate("/parcours/competences/details/");
 
     }
 

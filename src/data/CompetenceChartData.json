@@ -1,0 +1,32 @@
+[
+  {
+    "competence": "Service public d'éducation",
+    "Trimestre 1": 75,
+    "Trimestre 2": 85,
+    "Trimestre 3": 100
+  },
+  {
+    "competence": "Service de la réussite de tous les élèves",
+    "Trimestre 1": 43,
+    "Trimestre 2": 50,
+    "Trimestre 3": 63
+  },
+  {
+    "competence": "Acteurs de la communauté éducative",
+    "Trimestre 1": 55,
+    "Trimestre 2": 55,
+    "Trimestre 3": 80
+  },
+  {
+    "competence": "Porteur de savoirs et d'une culture commune",
+    "Trimestre 1": 100,
+    "Trimestre 2": 100,
+    "Trimestre 3": 100
+  },
+  {
+    "competence": "Experts des apprentissages",
+    "Trimestre 1": 17,
+    "Trimestre 2": 35,
+    "Trimestre 3": 45
+  }
+]

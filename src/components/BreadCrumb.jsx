@@ -50,7 +50,7 @@ export default function BreadCrumb() {
                 }
             }
 
-            if(path == "competences") path = "Mon Parcours";
+            if(path === "parcours") path = "Mon Parcours";
             return {
                 name: path.charAt(0).toUpperCase() + path.slice(1),
                 href: `/${paths.slice(0, index + 1).join("/")}`,

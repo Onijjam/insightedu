@@ -7,7 +7,12 @@ export default {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        evolution: 'url(https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1050&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+        competences: 'url(https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1050&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
