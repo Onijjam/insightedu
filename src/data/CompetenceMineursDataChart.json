@@ -1,0 +1,426 @@
+[
+  {
+    "competence": "Service public d'éducation",
+    "competence mineurs": [
+      {
+        "name": "Faire partager les valeurs de la République",
+        "note": "R",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.75
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 1
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Inscrire son action dans le cadre des principes fondamentaux du système éducatif et dans le cadre réglementaire de l'école",
+        "note": "C",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.25
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.50
+            }
+          ]
+        }]
+      }
+      ]
+  },
+  {
+    "competence": "Service de la réussite de tous les élèves",
+    "competence mineurs": [
+      {
+        "name": "Connaître les élèves et les processus d'apprentissage",
+        "note": "E",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0.25
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.50
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.75
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Prendre en compte la diversité des élèves",
+        "note": "N",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Accompagner les élèves dans leur parcours de formation",
+        "note": "D",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.25
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.25
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Agir en éducateur responsable et selon des principes éthiques",
+        "note": "R",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0.75
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.75
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 1
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Maîtriser la langue française à des fins de communication",
+        "note": "E",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0.50
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.50
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.75
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Utiliser une langue vivante étrangère dans les situations exigées par son métier",
+        "note": "D",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.25
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Intégrer les éléments de la culture numérique nécessaires à l'exercice de son métier",
+        "note": "N",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0
+            }
+          ]
+        }]
+      }
+    ]
+  },
+  {
+    "competence": "Acteurs de la communauté éducative",
+    "competence mineurs": [
+      {
+        "name": "Coopérer au sein d'une équipe",
+        "note": "N",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Contribuer à l'action de la communauté éducative",
+        "note": "E",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.5
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.75
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Coopérer avec les parents d'élèves",
+        "note": "C",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.25
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.5
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Coopérer avec les partenaires de l'école",
+        "note": "C",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0.5
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.5
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.5
+            }
+          ]
+        }]
+      },
+      {
+        "name": "S'engager dans une démarche individuelle et collective de développement professionnel",
+        "note": "R",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0.75
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.75
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 1
+            }
+          ]
+        }]
+      }
+    ]
+  },
+  {
+    "competence": "Porteur de savoirs et d'une culture commune",
+    "competence mineurs": [
+      {
+        "name": "Maîtriser les savoirs disciplinaires et leur didactique",
+        "note": "R",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0.75
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.75
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 1
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Maîtriser la langue française dans le cadre de son enseignement",
+        "note": "R",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.5
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 1
+            }
+          ]
+        }]
+      }
+    ]
+  },
+  {
+    "competence": "Experts des apprentissages",
+    "competence mineurs": [
+      {
+        "name": "Construire, mettre en œuvre et animer des situations d'enseignement et d'apprentissage prenant en compte la diversité des élèves",
+        "note": "D",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0.25
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.25
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Organiser et assurer un mode de fonctionnement du groupe favorisant l'apprentissage et la socialisation des élèves",
+        "note": "N",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0
+            }
+          ]
+        }]
+      },
+      {
+        "name": "Évaluer les progrès et les acquisitions des élèves",
+        "note": "D",
+        "evolution": [{
+          "id": "Compétence",
+          "data": [
+            {
+              "x": "Trimestre 1",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 2",
+              "y": 0
+            },
+            {
+              "x": "Trimestre 3",
+              "y": 0.25
+            }
+          ]
+        }]
+      }
+    ]
+  }
+]

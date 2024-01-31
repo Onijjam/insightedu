@@ -50,7 +50,7 @@ export default function BreadCrumb() {
                 }
             }
 
-            if(path == "competences") path = "Mon Parcours";
+            if(path === "parcours") path = "Mon Parcours";
             return {
                 name: path.charAt(0).toUpperCase() + path.slice(1),
                 href: `/${paths.slice(0, index + 1).join("/")}`,
@@ -61,7 +61,7 @@ export default function BreadCrumb() {
 
     return (
         <nav className="flex" aria-label="Breadcrumb">
-            <ol role="list" className="flex items-center space-x-4">
+            <ol role="list" className="flex flex-wrap items-center space-x-4">
                 <li>
                     <div>
                         <a href="/" className="text-gray-400 hover:text-gray-500">

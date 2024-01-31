@@ -35,6 +35,11 @@ function App() {
         setIsLoggedIn(true);
     };
 
+    const handleDisconnect = () => {
+        sessionStorage.setItem("loggedIn", "false");
+        setIsLoggedIn(false);
+    };
+
     const handlePasswordChange = () => {
         setPasswordChange(true);
     };
@@ -58,7 +63,7 @@ function App() {
                         )
                 ) : (
                     <>
-                        <NavBar utilisateur={"apprenant"}>
+                        <NavBar utilisateur={"apprenant"} disconnect={handleDisconnect}>
                             <div className={"bg-gray-900/10 w-full h-full rounded-md sm:p-5"}>
                                 <Outlet />
                             </div>

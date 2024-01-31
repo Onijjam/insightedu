@@ -30,7 +30,7 @@ const navigationFormateur = [
 
 const navigationApprenant = [
     { name: 'Accueil', to: '/', current: true },
-    { name: 'Mon Parcours', to: '/competences', current: false },
+    { name: 'Mon Parcours', to: '/parcours', current: false },
     { name: 'Équipe', to: '/contact', current: false },
 ]
 const userNavigation = [
@@ -43,7 +43,7 @@ function classNames(...classes) {
 }
 
 // eslint-disable-next-line react/prop-types
-export default function NavBar({ children, utilisateur }) {
+export default function NavBar({ children, utilisateur, disconnect }) {
     const [navigation, setNavigation] = useState(
         utilisateur === "formateur" ? navigationFormateur :
             utilisateur === "isfec" ? navigationIsfec :
@@ -54,6 +54,7 @@ export default function NavBar({ children, utilisateur }) {
         setNavigation((prevNavigation) =>
             prevNavigation.map((item) => {
                 if (item.name === clickedItemName) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                     return { ...item, current: true };
                 } else {
                     return { ...item, current: false };
@@ -150,6 +151,9 @@ export default function NavBar({ children, utilisateur }) {
                                                             {({ active }) => (
                                                                 <Link
                                                                     to={item.to}
+                                                                    onClick={() => {
+                                                                        item.name === "Se déconnecter" ? (disconnect()) : null;
+                                                                    }}
                                                                     className={classNames(
                                                                         active ? 'bg-gray-100' : '',
                                                                         'block px-4 py-2 text-sm text-gray-700'
@@ -182,7 +186,7 @@ export default function NavBar({ children, utilisateur }) {
                             <Disclosure.Panel className="sm:hidden">
                                 <div className="space-y-1 pb-3 pt-2">
                                     {navigation.map((item) => (
-                                        <Link
+                                        <Disclosure.Button as={Link}
                                             to={item.to}
                                             key={item.name}
                                             onClick={() => {
@@ -198,7 +202,7 @@ export default function NavBar({ children, utilisateur }) {
                                             aria-current={item.current ? 'page' : undefined}
                                         >
                                             {item.name}
-                                        </Link>
+                                        </Disclosure.Button>
                                     ))}
                                 </div>
                                 <div className="border-t border-gray-200 pb-3 pt-4">
@@ -219,6 +223,9 @@ export default function NavBar({ children, utilisateur }) {
                                             <Link
                                                 key={item.name}
                                                 to={item.to}
+                                                onClick={() => {
+                                                    item.name === "Se déconnecter" ? (disconnect()) : null;
+                                                }}
                                                 className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                                             >
                                                 {item.name}
