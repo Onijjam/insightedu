@@ -13,6 +13,7 @@ import ContactPage from "../pages/ContactPage.jsx";
 import {ProfilPage} from "../pages/ProfilPage.jsx";
 import {Evolution} from "../pages/Evolution.jsx";
 import {MonParcours} from "../pages/MonParcours.jsx";
+import {TableFormateur} from "../pages/TableFormateur.jsx";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Dashboard/>
+            },
+            {
+                path: "/table-formateur",
+                element: <TableFormateur />
             },
             {
                 path: "/contact-support",
