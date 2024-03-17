@@ -22,10 +22,9 @@ const navigationIsfec = [
 
 const navigationFormateur = [
     { name: 'Accueil', to: '/', current: true },
-    { name: 'Mon Parcours', to: '/', current: false },
-    { name: 'Apprenants', to: '/', current: false },
-    { name: 'Statistiques', to: '/', current: false },
-    { name: 'Contact', to: '/', current: false },
+    { name: 'Mon Parcours', to: '/parcours', current: false },
+    { name: 'Apprenants', to: '/table-formateur', current: false },
+    { name: 'Contact', to: '/contact', current: false },
 ];
 
 const navigationApprenant = [

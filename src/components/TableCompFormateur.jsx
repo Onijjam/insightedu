@@ -26,8 +26,8 @@ export const TableCompFormateur = ({ setOpen, people }) => {
                 return order * a.role.localeCompare(b.role);
             case "email":
                 return order * a.email.localeCompare(b.email);
-            case "specialty":
-                return order * a.specialty.localeCompare(b.specialty);
+            case "public":
+                return order * a.public.localeCompare(b.public);
             default:
                 return 0;
         }
@@ -93,11 +93,11 @@ export const TableCompFormateur = ({ setOpen, people }) => {
                         </div>
                     </th>
                     <th scope="col" className="hidden py-2 pl-0 pr-8 font-semibold md:table-cell lg:pr-20">
-                        <div className={"group select-none cursor-pointer inline-flex"} onClick={() => handleChevronChange("specialty")}>
-                            Spécialité
-                            <span className={`ml-2 flex justify-center items-center rounded ${chevronPlace === "specialty" ? "bg-gray-100 text-gray-900 group-hover:bg-gray-200" : "text-gray-400 invisible group-hover:visible group-focus:visible"}`}>
+                        <div className={"group select-none cursor-pointer inline-flex"} onClick={() => handleChevronChange("public")}>
+                            Publics
+                            <span className={`ml-2 flex justify-center items-center rounded ${chevronPlace === "public" ? "bg-gray-100 text-gray-900 group-hover:bg-gray-200" : "text-gray-400 invisible group-hover:visible group-focus:visible"}`}>
                                 <ChevronDownIcon className={`h-5 w-5 ${
-                                    (chevronPlace === "specialty" && chevronInverse) ? "transform rotate-180" : ""
+                                    (chevronPlace === "public" && chevronInverse) ? "transform rotate-180" : ""
                                 }`} aria-hidden="true" />
                           </span>
                         </div>
@@ -105,6 +105,7 @@ export const TableCompFormateur = ({ setOpen, people }) => {
                 </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-900/5">
+                {/* eslint-disable-next-line react/prop-types */}
                 {people.sort(compareFunction).map((item) => (
                     <tr key={item.id} className={"hover:bg-gray-500/5"}>
                         <td className="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
@@ -124,7 +125,7 @@ export const TableCompFormateur = ({ setOpen, people }) => {
                             </div>
                         </td>
                         <td className="hidden py-4 pl-0 pr-10 text-sm leading-6 text-gray-400 md:table-cell">
-                            {item.specialty}
+                            {item.public}
                         </td>
                         <td className="py-4 pl-0 pr-4 text-cyan-400 text-right text-md leading-6 sm:pr-6 lg:pr-8">
                             <a href="/parcours/competences" className="bold text-cyan-400 hover:text-cyan-500 mr-1">

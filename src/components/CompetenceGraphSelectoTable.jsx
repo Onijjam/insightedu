@@ -1,10 +1,12 @@
 import {Disclosure, Transition} from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid'
 import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
+import {useState} from "react";
 
 
 // eslint-disable-next-line react/prop-types
-const CompMineursPanel = ({ competenceMineurs, onItemSelect }) => {
+const CompMineursPanel = ({ competenceMineurs, onItemSelect, active, setActive }) => {
+
     // La fonction handleNote peut être réutilisée ou adaptée de CompMineurs
     function handleNote(note) {
         let value = 0;
@@ -48,7 +50,10 @@ const CompMineursPanel = ({ competenceMineurs, onItemSelect }) => {
         >
             {/* eslint-disable-next-line react/prop-types */}
             {competenceMineurs.map((competence) => (
-                <li key={competence.name} className="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-gray-50 sm:px-6" onClick={() => onItemSelect(competence.evolution)}>
+                <li key={competence.name} className={`relative flex justify-between gap-x-6 px-4 py-5 ${active === competence.name ? "bg-gray-100" : ""} hover:bg-gray-50 sm:px-6`} onClick={() => {
+                    onItemSelect(competence.evolution);
+                    setActive(competence.name);
+                }}>
                     <button className="flex items-center min-w-0 gap-x-4">
                         <CircularProgressbar
                             value={handleNote(competence.note).value}
@@ -74,6 +79,7 @@ const CompMineursPanel = ({ competenceMineurs, onItemSelect }) => {
 
 // eslint-disable-next-line react/prop-types
 export const CompetenceGraphSelectoTable = ({data, setDataLine}) => {
+    const [active, setActive] = useState(null);
     return (
         <>
             {/* eslint-disable-next-line react/prop-types */}
@@ -99,7 +105,7 @@ export const CompetenceGraphSelectoTable = ({data, setDataLine}) => {
                                 leaveTo="transform scale-95 opacity-0"
                             >
                             <Disclosure.Panel className="px-4 pb-2 pt-2 text-sm text-gray-500">
-                                <CompMineursPanel competenceMineurs={item['competence mineurs']} onItemSelect={(itemData) => setDataLine(itemData)} />
+                                <CompMineursPanel competenceMineurs={item['competence mineurs']} onItemSelect={(itemData) => setDataLine(itemData)} active={active} setActive={setActive}/>
                             </Disclosure.Panel>
                             </Transition>
                         </>

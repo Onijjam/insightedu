@@ -2,7 +2,7 @@ import ContactDashComponent from "../components/ContactDashComponent.jsx";
 import {CompCarouselComponent} from "../components/CompCarouselComponent.jsx";
 import ContentSecDashComponent from "../components/ContentSecDashComponent.jsx";
 
-export function Dashboard() {
+export function DashboardApprenants() {
     return (
         <>
             <div className={"grid lg:grid-cols-6 lg:grid-rows-6 lg:gap-4 lg:h-[80vh] w-full"}>

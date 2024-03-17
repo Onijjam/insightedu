@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+// eslint-disable-next-line react/prop-types
 export default function PasswordCreation({onSuccess}) {
     const [progression, setProgression] = useState(0)
     const [password, setPassword] = useState('')

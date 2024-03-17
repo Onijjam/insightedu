@@ -10,12 +10,19 @@ export function Login({ onSuccessfulLogin })  {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const isAuthenticated = email === "test@test.com" && password === "password"; // À remplacer par un appel API
+        const isAuthenticatedUser = email === "user@test.com" && password === "password"; // À remplacer par un appel API
+        const isAuthenticatedFormateur = email === "formateur@test.com" && password === "password"; // À remplacer par un appel API
 
-        if (isAuthenticated) {
+        if (isAuthenticatedUser) {
             sessionStorage.setItem("loggedIn", "true");
             onSuccessfulLogin();
-        } else {
+        }
+        else if (isAuthenticatedFormateur) {
+            sessionStorage.setItem("loggedIn", "true");
+            sessionStorage.setItem("formateur", "true");
+            onSuccessfulLogin();
+        }
+        else {
             setShowAlert(true);
         }
     };

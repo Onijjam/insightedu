@@ -6,10 +6,10 @@
       "imageUrl":
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
-    "role": "Apprenant",
+    "role": "Étudiant",
     "profileUrl": "#",
     "email": "example@email.com",
-    "specialty": "Français"
+    "public": "Master CRPE M1"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "role": "Chef d'établissement",
     "email": "example@email.com",
     "profileUrl": "#",
-    "specialty": "Physique"
+    "public": "Année 2"
   },
   {
     "id": 3,
@@ -30,10 +30,10 @@
       "imageUrl":
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
-    "role": "Apprenant",
+    "role": "Professeur stagiaire",
     "email": "example@email.com",
     "profileUrl": "#",
-    "specialty": "Informatique"
+    "public": "1er degré MEEF"
   },
   {
     "id": 4,
@@ -45,6 +45,6 @@
     "role": "Chef d'établissement",
     "email": "example@email.com",
     "profileUrl": "#",
-    "specialty": "Mathématiques"
+    "public": "Année 1"
   }
 ]

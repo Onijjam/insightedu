@@ -1,6 +1,5 @@
 import {ProgressBarCompDetail} from "../components/ProgressBarCompDetail.jsx";
 import CommentFeed from "../components/CommentFeed.jsx";
-import UpdateFeed from "../components/UpdateFeed.jsx";
 import {useContext} from "react";
 import {Datacontext} from "../App.jsx";
 

@@ -112,8 +112,8 @@ export const SearchPopUp = ({open, setOpen, people}) => {
                                                         </div>
                                                         <div className="flex flex-auto flex-col justify-between p-6">
                                                             <dl className="h-full grid grid-cols-1 gap-x-6 gap-y-3 text-sm text-gray-700">
-                                                                <dt className="flex items-center col-end-1 font-semibold text-gray-900">Spécialité</dt>
-                                                                <dd className={'flex items-center'}>{activeOption.specialty}</dd>
+                                                                <dt className="flex items-center col-end-1 font-semibold text-gray-900">Public</dt>
+                                                                <dd className={'flex items-center'}>{activeOption.public}</dd>
                                                                 <dt className="flex items-center col-end-1 font-semibold text-gray-900">Email</dt>
                                                                 <dd className="flex items-center truncate">
                                                                     <a href={`mailto:${activeOption.email}`} className="text-cyan-500 underline">

@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar.jsx"
 import {Login} from "./pages/Login.jsx";
-import { Outlet } from "react-router-dom";
+import {Outlet, useNavigate} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import Footer from "./components/Footer.jsx";
 import PasswordCreation from "./pages/PasswordCreation.jsx";
@@ -15,6 +15,8 @@ function App() {
     const [competenceMaj, setCompetenceMaj] = useState(null);
     const [competenceMin, setCompetenceMin] = useState(null);
     const [competenceNote, setCompetenceNote] = useState(null);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const loggedIn = sessionStorage.getItem("loggedIn");
@@ -33,10 +35,12 @@ function App() {
 
     const handleLogin = () => {
         setIsLoggedIn(true);
+        navigate(0);
     };
 
-    const handleDisconnect = () => {
+    const handleDisconnectUser = () => {
         sessionStorage.setItem("loggedIn", "false");
+        sessionStorage.setItem("formateur", "false");
         setIsLoggedIn(false);
     };
 
@@ -63,7 +67,7 @@ function App() {
                         )
                 ) : (
                     <>
-                        <NavBar utilisateur={"apprenant"} disconnect={handleDisconnect}>
+                        <NavBar utilisateur={sessionStorage.getItem("formateur") === "true" ? "formateur" : "apprenant"} disconnect={handleDisconnectUser}>
                             <div className={"bg-gray-900/10 w-full h-full rounded-md sm:p-5"}>
                                 <Outlet />
                             </div>

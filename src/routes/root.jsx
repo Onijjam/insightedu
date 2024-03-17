@@ -1,5 +1,5 @@
 import {createBrowserRouter} from "react-router-dom";
-import {Dashboard} from "../pages/Dashboard.jsx";
+import {DashboardApprenants} from "../pages/DashboardApprenants.jsx";
 import {ContactSupport} from "../pages/ContactSupport.jsx";
 import App from "../App.jsx";
 import {ErrorPage} from "../pages/ErrorPage.jsx";
@@ -14,6 +14,7 @@ import {ProfilPage} from "../pages/ProfilPage.jsx";
 import {Evolution} from "../pages/Evolution.jsx";
 import {MonParcours} from "../pages/MonParcours.jsx";
 import {TableFormateur} from "../pages/TableFormateur.jsx";
+import {DashboardFormateurs} from "../pages/DashboardFormateurs.jsx";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Dashboard/>
+                element: sessionStorage.getItem("formateur") === "true" ? <DashboardFormateurs/> : <DashboardApprenants/>
             },
             {
                 path: "/table-formateur",

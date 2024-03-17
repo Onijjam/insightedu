@@ -51,6 +51,7 @@ export default function BreadCrumb() {
             }
 
             if(path === "parcours") path = "Mon Parcours";
+            if(path === "table-formateur") path = "Apprenants";
             return {
                 name: path.charAt(0).toUpperCase() + path.slice(1),
                 href: `/${paths.slice(0, index + 1).join("/")}`,
